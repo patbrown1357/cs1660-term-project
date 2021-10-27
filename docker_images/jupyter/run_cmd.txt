@@ -1,0 +1,1 @@
+docker run -it --rm pob6/jupyter jupyter notebook

@@ -1,0 +1,1 @@
+FROM harisekhon/hadoop:latest
