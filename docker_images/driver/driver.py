@@ -1,8 +1,10 @@
 def main():
     display_menu()
     choice = ''
-    while(choice != 'q'):
-        choice = input("Please enter a number or 'q': ")
+    while(True):
+        choice = input("Please enter a number or \'q\': ")
+        if choice == 'q':
+            exit(0)
         match int(choice):
             case 1:
                 print("running hadoop")
