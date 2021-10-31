@@ -1,1 +1,1 @@
-FROM bitnami/jupyter-base-notebook:latest
+FROM jupyter/base-notebook:latest

@@ -1,0 +1,7 @@
+docker run -d --name spark --network=spark_network -e SPARK_MODE=master spark
+
+to run
+docker_compose up (you can also add an argument for more workers)
+
+then go to localhost:8080
+on kubernetes may be different but also 8080
