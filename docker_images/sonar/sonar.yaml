@@ -1,0 +1,41 @@
+---
+apiVersion: "apps/v1"
+kind: "Deployment"
+metadata:
+  name: "sonar"
+  namespace: "default"
+  labels:
+    app: "sonar"
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: "sonar"
+  template:
+    metadata:
+      labels:
+        app: "sonar"
+    spec:
+      containers:
+      - name: "sonar-1"
+        image: "us.gcr.io/course-project-330721/pob6/sonar:latest"
+---
+apiVersion: "autoscaling/v2beta1"
+kind: "HorizontalPodAutoscaler"
+metadata:
+  name: "sonar-hpa-roai"
+  namespace: "default"
+  labels:
+    app: "sonar"
+spec:
+  scaleTargetRef:
+    kind: "Deployment"
+    name: "sonar"
+    apiVersion: "apps/v1"
+  minReplicas: 1
+  maxReplicas: 5
+  metrics:
+  - type: "Resource"
+    resource:
+      name: "cpu"
+      targetAverageUtilization: 80
