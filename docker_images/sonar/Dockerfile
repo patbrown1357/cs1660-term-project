@@ -1,2 +1,2 @@
 FROM sonarqube:8.9-community
-RUN ["apk", "add", "sonar-scanner", "-y"]
+COPY sonar-scanner-cli /usr/local/bin/sonar-scanner-cli
