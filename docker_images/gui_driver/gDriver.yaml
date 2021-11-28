@@ -1,0 +1,41 @@
+---
+apiVersion: "apps/v1"
+kind: "Deployment"
+metadata:
+  name: "gui-driver"
+  namespace: "default"
+  labels:
+    app: "gui-driver"
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: "gui-driver"
+  template:
+    metadata:
+      labels:
+        app: "gui-driver"
+    spec:
+      containers:
+      - name: "gui-driver-1"
+        image: "us.gcr.io/course-project-330721/pob6/gui_driver:latest"
+---
+apiVersion: "autoscaling/v2beta1"
+kind: "HorizontalPodAutoscaler"
+metadata:
+  name: "gui-driver-hpa-zmzw"
+  namespace: "default"
+  labels:
+    app: "gui-driver"
+spec:
+  scaleTargetRef:
+    kind: "Deployment"
+    name: "gui-driver"
+    apiVersion: "apps/v1"
+  minReplicas: 1
+  maxReplicas: 5
+  metrics:
+  - type: "Resource"
+    resource:
+      name: "cpu"
+      targetAverageUtilization: 80
