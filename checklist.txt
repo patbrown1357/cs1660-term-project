@@ -1,8 +1,0 @@
-driver - working
-hadoop
-jupyter - working
-sonar_qube_scanner
-spark - working
-    - go to localhost:8080
-
-Note: Investigate from, may require that the image be downloaded first

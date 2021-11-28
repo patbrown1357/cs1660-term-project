@@ -1,17 +1,17 @@
 pob6/spark
 https://hub.docker.com/repository/docker/pob6/spark
 
-pob6/sonarqube
-https://hub.docker.com/repository/docker/pob6/sonarqube
+pob6/sonar
+https://hub.docker.com/repository/docker/pob6/sonar
 
-pob6/sonar_scanner
-https://hub.docker.com/repository/docker/pob6/sonar_scanner
+pob6/hadoop-namenode
+https://hub.docker.com/repository/docker/pob6/hadoop
 
-pob6/hadoop
+pob6/hadoop-datanode
 https://hub.docker.com/repository/docker/pob6/hadoop
 
 pob6/jupyter
 https://hub.docker.com/repository/docker/pob6/jupyter
 
-pob6/driver
-https://hub.docker.com/repository/docker/pob6/driver
+pob6/gui_driver
+https://hub.docker.com/repository/docker/pob6/gui_driver

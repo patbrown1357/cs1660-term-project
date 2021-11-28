@@ -1,2 +1,0 @@
-FROM newtmitch/sonar-scanner
-
