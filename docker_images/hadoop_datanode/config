@@ -1,22 +1,26 @@
-   datanode:
+  datanode:
     image: bde2020/hadoop-datanode:2.0.0-hadoop3.2.1-java8
-    networks:
-      - hbase
+    container_name: datanode
+    restart: always
     volumes:
-      - datanode:/hadoop/dfs/data
+      - hadoop_datanode:/hadoop/dfs/data
+    environment:
+      SERVICE_PRECONDITION: "34.122.2.71:9870"
     env_file:
       - ./hadoop.env
-    environment:
-      SERVICE_PRECONDITION: "namenode:50070"
-    deploy:
-      mode: global
-      restart_policy:
-        condition: on-failure
-      labels:
-        traefik.docker.network: hbase
-        traefik.port: 50075
 
-CORE_CONF_fs_defaultFS=hdfs://namenode:9000
+  datanode:
+    image: bde2020/hadoop-datanode:2.0.0-hadoop3.2.1-java8
+    container_name: datanode
+    restart: always
+    volumes:
+      - hadoop_datanode:/hadoop/dfs/data
+    environment:
+      SERVICE_PRECONDITION: "34.122.2.71:9870"
+    env_file:
+      - ./hadoop.env
+
+CORE_CONF_fs_defaultFS=hdfs://34.122.2.71:9000
 CORE_CONF_hadoop_http_staticuser_user=root
 CORE_CONF_hadoop_proxyuser_hue_hosts=*
 CORE_CONF_hadoop_proxyuser_hue_groups=*

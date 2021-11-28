@@ -1,0 +1,105 @@
+---
+apiVersion: "v1"
+kind: "ConfigMap"
+metadata:
+  name: "hadoop-datanode-4-config-mhbg"
+  namespace: "default"
+  labels:
+    app: "hadoop-datanode-4"
+data:
+  SERVICE_PRECONDITION: "\"34.122.2.71:9870\""
+  CORE_CONF_fs_defaultFS: "hdfs://34.122.2.71:9000"
+  CORE_CONF_hadoop_http_staticuser_user: "root"
+  CORE_CONF_hadoop_proxyuser_hue_hosts: "*"
+  CORE_CONF_hadoop_proxyuser_hue_groups: "*"
+  CORE_CONF_io_compression_codecs: "org.apache.hadoop.io.compress.SnappyCodec"
+  HDFS_CONF_dfs_webhdfs_enabled: "true"
+  HDFS_CONF_dfs_permissions_enabled: "false"
+  HDFS_CONF_dfs_namenode_datanode_registration_ip___hostname___check: "false"
+---
+apiVersion: "apps/v1"
+kind: "Deployment"
+metadata:
+  name: "hadoop-datanode-4"
+  namespace: "default"
+  labels:
+    app: "hadoop-datanode-4"
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: "hadoop-datanode-4"
+  template:
+    metadata:
+      labels:
+        app: "hadoop-datanode-4"
+    spec:
+      containers:
+      - name: "hadoop-datanode-1"
+        image: "us.gcr.io/course-project-330721/hadoop-datanode:latest"
+        env:
+        - name: "SERVICE_PRECONDITION"
+          valueFrom:
+            configMapKeyRef:
+              key: "SERVICE_PRECONDITION"
+              name: "hadoop-datanode-4-config-mhbg"
+        - name: "CORE_CONF_fs_defaultFS"
+          valueFrom:
+            configMapKeyRef:
+              key: "CORE_CONF_fs_defaultFS"
+              name: "hadoop-datanode-4-config-mhbg"
+        - name: "CORE_CONF_hadoop_http_staticuser_user"
+          valueFrom:
+            configMapKeyRef:
+              key: "CORE_CONF_hadoop_http_staticuser_user"
+              name: "hadoop-datanode-4-config-mhbg"
+        - name: "CORE_CONF_hadoop_proxyuser_hue_hosts"
+          valueFrom:
+            configMapKeyRef:
+              key: "CORE_CONF_hadoop_proxyuser_hue_hosts"
+              name: "hadoop-datanode-4-config-mhbg"
+        - name: "CORE_CONF_hadoop_proxyuser_hue_groups"
+          valueFrom:
+            configMapKeyRef:
+              key: "CORE_CONF_hadoop_proxyuser_hue_groups"
+              name: "hadoop-datanode-4-config-mhbg"
+        - name: "CORE_CONF_io_compression_codecs"
+          valueFrom:
+            configMapKeyRef:
+              key: "CORE_CONF_io_compression_codecs"
+              name: "hadoop-datanode-4-config-mhbg"
+        - name: "HDFS_CONF_dfs_webhdfs_enabled"
+          valueFrom:
+            configMapKeyRef:
+              key: "HDFS_CONF_dfs_webhdfs_enabled"
+              name: "hadoop-datanode-4-config-mhbg"
+        - name: "HDFS_CONF_dfs_permissions_enabled"
+          valueFrom:
+            configMapKeyRef:
+              key: "HDFS_CONF_dfs_permissions_enabled"
+              name: "hadoop-datanode-4-config-mhbg"
+        - name: "HDFS_CONF_dfs_namenode_datanode_registration_ip___hostname___check"
+          valueFrom:
+            configMapKeyRef:
+              key: "HDFS_CONF_dfs_namenode_datanode_registration_ip___hostname___check"
+              name: "hadoop-datanode-4-config-mhbg"
+---
+apiVersion: "autoscaling/v2beta1"
+kind: "HorizontalPodAutoscaler"
+metadata:
+  name: "hadoop-datanode-4-hpa-tj4f"
+  namespace: "default"
+  labels:
+    app: "hadoop-datanode-4"
+spec:
+  scaleTargetRef:
+    kind: "Deployment"
+    name: "hadoop-datanode-4"
+    apiVersion: "apps/v1"
+  minReplicas: 1
+  maxReplicas: 5
+  metrics:
+  - type: "Resource"
+    resource:
+      name: "cpu"
+      targetAverageUtilization: 80

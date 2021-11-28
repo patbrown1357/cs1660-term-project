@@ -2,35 +2,35 @@
 apiVersion: "apps/v1"
 kind: "Deployment"
 metadata:
-  name: "driver"
+  name: "jupyter-notebook"
   namespace: "default"
   labels:
-    app: "driver"
+    app: "jupyter-notebook"
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: "driver"
+      app: "jupyter-notebook"
   template:
     metadata:
       labels:
-        app: "driver"
+        app: "jupyter-notebook"
     spec:
       containers:
-      - name: "driver-1"
-        image: "us.gcr.io/course-project-330721/pob6/driver:latest"
+      - name: "jupyter-1"
+        image: "us.gcr.io/course-project-330721/pob6/jupyter:latest"
 ---
 apiVersion: "autoscaling/v2beta1"
 kind: "HorizontalPodAutoscaler"
 metadata:
-  name: "driver-hpa-v7fk"
+  name: "jupyter-notebook-hpa-o1nk"
   namespace: "default"
   labels:
-    app: "driver"
+    app: "jupyter-notebook"
 spec:
   scaleTargetRef:
     kind: "Deployment"
-    name: "driver"
+    name: "jupyter-notebook"
     apiVersion: "apps/v1"
   minReplicas: 1
   maxReplicas: 5

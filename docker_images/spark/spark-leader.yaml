@@ -1,0 +1,81 @@
+---
+apiVersion: "v1"
+kind: "ConfigMap"
+metadata:
+  name: "spark-leader-config-yltw"
+  namespace: "default"
+  labels:
+    app: "spark-leader"
+data:
+  SPARK_MODE: "master"
+  SPARK_RPC_AUTHENTICATION_ENABLED: "no"
+  SPARK_RPC_ENCRYPTION_ENABLED: "no"
+  SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED: "no"
+  SPARK_SSL_ENABLED: "no"
+---
+apiVersion: "apps/v1"
+kind: "Deployment"
+metadata:
+  name: "spark-leader"
+  namespace: "default"
+  labels:
+    app: "spark-leader"
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: "spark-leader"
+  template:
+    metadata:
+      labels:
+        app: "spark-leader"
+    spec:
+      containers:
+      - name: "spark-sha256-1"
+        image: "us.gcr.io/course-project-330721/pob6/spark@sha256:43b28d68dda98dbb3496551213f8d69a8f963547b962a7e8d7f0843e3f0131ea"
+        env:
+        - name: "SPARK_MODE"
+          valueFrom:
+            configMapKeyRef:
+              key: "SPARK_MODE"
+              name: "spark-leader-config-yltw"
+        - name: "SPARK_RPC_AUTHENTICATION_ENABLED"
+          valueFrom:
+            configMapKeyRef:
+              key: "SPARK_RPC_AUTHENTICATION_ENABLED"
+              name: "spark-leader-config-yltw"
+        - name: "SPARK_RPC_ENCRYPTION_ENABLED"
+          valueFrom:
+            configMapKeyRef:
+              key: "SPARK_RPC_ENCRYPTION_ENABLED"
+              name: "spark-leader-config-yltw"
+        - name: "SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED"
+          valueFrom:
+            configMapKeyRef:
+              key: "SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED"
+              name: "spark-leader-config-yltw"
+        - name: "SPARK_SSL_ENABLED"
+          valueFrom:
+            configMapKeyRef:
+              key: "SPARK_SSL_ENABLED"
+              name: "spark-leader-config-yltw"
+---
+apiVersion: "autoscaling/v2beta1"
+kind: "HorizontalPodAutoscaler"
+metadata:
+  name: "spark-leader-hpa-ndiv"
+  namespace: "default"
+  labels:
+    app: "spark-leader"
+spec:
+  scaleTargetRef:
+    kind: "Deployment"
+    name: "spark-leader"
+    apiVersion: "apps/v1"
+  minReplicas: 1
+  maxReplicas: 5
+  metrics:
+  - type: "Resource"
+    resource:
+      name: "cpu"
+      targetAverageUtilization: 80

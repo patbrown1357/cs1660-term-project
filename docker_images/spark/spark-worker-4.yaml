@@ -1,0 +1,93 @@
+---
+apiVersion: "v1"
+kind: "ConfigMap"
+metadata:
+  name: "spark-worker-4-config-ommp"
+  namespace: "default"
+  labels:
+    app: "spark-worker-4"
+data:
+  SPARK_MODE: "worker"
+  SPARK_MASTER_URL: "10.60.6.21:7077"
+  SPARK_WORKER_MEMORY: "1G"
+  SPARK_WORKER_CORES: "1"
+  SPARK_RPC_AUTHENTICATION_ENABLED: "no"
+  SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED: "no"
+  SPARK_SSL_ENABLED: "no"
+---
+apiVersion: "apps/v1"
+kind: "Deployment"
+metadata:
+  name: "spark-worker-4"
+  namespace: "default"
+  labels:
+    app: "spark-worker-4"
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: "spark-worker-4"
+  template:
+    metadata:
+      labels:
+        app: "spark-worker-4"
+    spec:
+      containers:
+      - name: "spark-1"
+        image: "us.gcr.io/course-project-330721/pob6/spark:latest"
+        env:
+        - name: "SPARK_MODE"
+          valueFrom:
+            configMapKeyRef:
+              key: "SPARK_MODE"
+              name: "spark-worker-4-config-ommp"
+        - name: "SPARK_MASTER_URL"
+          valueFrom:
+            configMapKeyRef:
+              key: "SPARK_MASTER_URL"
+              name: "spark-worker-4-config-ommp"
+        - name: "SPARK_WORKER_MEMORY"
+          valueFrom:
+            configMapKeyRef:
+              key: "SPARK_WORKER_MEMORY"
+              name: "spark-worker-4-config-ommp"
+        - name: "SPARK_WORKER_CORES"
+          valueFrom:
+            configMapKeyRef:
+              key: "SPARK_WORKER_CORES"
+              name: "spark-worker-4-config-ommp"
+        - name: "SPARK_RPC_AUTHENTICATION_ENABLED"
+          valueFrom:
+            configMapKeyRef:
+              key: "SPARK_RPC_AUTHENTICATION_ENABLED"
+              name: "spark-worker-4-config-ommp"
+        - name: "SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED"
+          valueFrom:
+            configMapKeyRef:
+              key: "SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED"
+              name: "spark-worker-4-config-ommp"
+        - name: "SPARK_SSL_ENABLED"
+          valueFrom:
+            configMapKeyRef:
+              key: "SPARK_SSL_ENABLED"
+              name: "spark-worker-4-config-ommp"
+---
+apiVersion: "autoscaling/v2beta1"
+kind: "HorizontalPodAutoscaler"
+metadata:
+  name: "spark-worker-4-hpa-eqqu"
+  namespace: "default"
+  labels:
+    app: "spark-worker-4"
+spec:
+  scaleTargetRef:
+    kind: "Deployment"
+    name: "spark-worker-4"
+    apiVersion: "apps/v1"
+  minReplicas: 1
+  maxReplicas: 5
+  metrics:
+  - type: "Resource"
+    resource:
+      name: "cpu"
+      targetAverageUtilization: 80
