@@ -1,0 +1,66 @@
+--- 
+apiVersion: v1
+kind: Service
+metadata: 
+  annotations: 
+    cloud.google.com/neg: "{\"ingress\":true}"
+  generateName: spark-leader-
+  labels: 
+    app: spark-leader
+  managedFields: 
+    - 
+      apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1: 
+        ? "f:metadata"
+        : 
+          ? "f:generateName"
+          : {}
+          ? "f:labels"
+          : 
+            ? "."
+            : {}
+            ? "f:app"
+            : {}
+        ? "f:spec"
+        : 
+          ? "f:ports"
+          : 
+            ? "."
+            : {}
+            ? "k:{\"port\":7077,\"protocol\":\"TCP\"}"
+            : 
+              ? "."
+              : {}
+              ? "f:port"
+              : {}
+              ? "f:protocol"
+              : {}
+              ? "f:targetPort"
+              : {}
+          ? "f:selector"
+          : 
+            ? "."
+            : {}
+            ? "f:app"
+            : {}
+          ? "f:sessionAffinity"
+          : {}
+          ? "f:type"
+          : {}
+      manager: GoogleCloudConsole
+      operation: Update
+  name: spark-leader-j9ftl
+  namespace: default
+spec: 
+  ports: 
+    - 
+      port: 7077
+      protocol: TCP
+      targetPort: 7077
+  selector: 
+    app: spark-leader
+  sessionAffinity: None
+  type: ClusterIP
+status: 
+  loadBalancer: {}

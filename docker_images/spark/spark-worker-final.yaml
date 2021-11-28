@@ -1,0 +1,239 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    deployment.kubernetes.io/revision: "1"
+  creationTimestamp: "2021-11-28T15:27:51Z"
+  generation: 1
+  labels:
+    app: spark-worker-4
+  managedFields:
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:app: {}
+      f:spec:
+        f:progressDeadlineSeconds: {}
+        f:replicas: {}
+        f:revisionHistoryLimit: {}
+        f:selector: {}
+        f:strategy:
+          f:rollingUpdate:
+            .: {}
+            f:maxSurge: {}
+            f:maxUnavailable: {}
+          f:type: {}
+        f:template:
+          f:metadata:
+            f:labels:
+              .: {}
+              f:app: {}
+          f:spec:
+            f:containers:
+              k:{"name":"spark-1"}:
+                .: {}
+                f:env:
+                  .: {}
+                  k:{"name":"SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED"}:
+                    .: {}
+                    f:name: {}
+                    f:valueFrom:
+                      .: {}
+                      f:configMapKeyRef:
+                        .: {}
+                        f:key: {}
+                        f:name: {}
+                  k:{"name":"SPARK_MASTER_URL"}:
+                    .: {}
+                    f:name: {}
+                    f:valueFrom:
+                      .: {}
+                      f:configMapKeyRef:
+                        .: {}
+                        f:key: {}
+                        f:name: {}
+                  k:{"name":"SPARK_MODE"}:
+                    .: {}
+                    f:name: {}
+                    f:valueFrom:
+                      .: {}
+                      f:configMapKeyRef:
+                        .: {}
+                        f:key: {}
+                        f:name: {}
+                  k:{"name":"SPARK_RPC_AUTHENTICATION_ENABLED"}:
+                    .: {}
+                    f:name: {}
+                    f:valueFrom:
+                      .: {}
+                      f:configMapKeyRef:
+                        .: {}
+                        f:key: {}
+                        f:name: {}
+                  k:{"name":"SPARK_SSL_ENABLED"}:
+                    .: {}
+                    f:name: {}
+                    f:valueFrom:
+                      .: {}
+                      f:configMapKeyRef:
+                        .: {}
+                        f:key: {}
+                        f:name: {}
+                  k:{"name":"SPARK_WORKER_CORES"}:
+                    .: {}
+                    f:name: {}
+                    f:valueFrom:
+                      .: {}
+                      f:configMapKeyRef:
+                        .: {}
+                        f:key: {}
+                        f:name: {}
+                  k:{"name":"SPARK_WORKER_MEMORY"}:
+                    .: {}
+                    f:name: {}
+                    f:valueFrom:
+                      .: {}
+                      f:configMapKeyRef:
+                        .: {}
+                        f:key: {}
+                        f:name: {}
+                f:image: {}
+                f:imagePullPolicy: {}
+                f:name: {}
+                f:resources: {}
+                f:terminationMessagePath: {}
+                f:terminationMessagePolicy: {}
+            f:dnsPolicy: {}
+            f:restartPolicy: {}
+            f:schedulerName: {}
+            f:securityContext: {}
+            f:terminationGracePeriodSeconds: {}
+    manager: GoogleCloudConsole
+    operation: Update
+    time: "2021-11-28T15:27:51Z"
+  - apiVersion: apps/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:deployment.kubernetes.io/revision: {}
+      f:status:
+        f:availableReplicas: {}
+        f:conditions:
+          .: {}
+          k:{"type":"Available"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:lastUpdateTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Progressing"}:
+            .: {}
+            f:lastTransitionTime: {}
+            f:lastUpdateTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+        f:observedGeneration: {}
+        f:readyReplicas: {}
+        f:replicas: {}
+        f:updatedReplicas: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2021-11-28T15:27:54Z"
+  name: spark-worker-4
+  namespace: default
+  resourceVersion: "9703"
+  uid: eb651685-c0b6-4905-99f9-4f348e1f6b27
+spec:
+  progressDeadlineSeconds: 600
+  replicas: 3
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      app: spark-worker-4
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: spark-worker-4
+    spec:
+      containers:
+      - env:
+        - name: SPARK_MODE
+          valueFrom:
+            configMapKeyRef:
+              key: SPARK_MODE
+              name: spark-worker-4-config-frra
+        - name: SPARK_MASTER_URL
+          valueFrom:
+            configMapKeyRef:
+              key: SPARK_MASTER_URL
+              name: spark-worker-4-config-frra
+        - name: SPARK_WORKER_MEMORY
+          valueFrom:
+            configMapKeyRef:
+              key: SPARK_WORKER_MEMORY
+              name: spark-worker-4-config-frra
+        - name: SPARK_WORKER_CORES
+          valueFrom:
+            configMapKeyRef:
+              key: SPARK_WORKER_CORES
+              name: spark-worker-4-config-frra
+        - name: SPARK_RPC_AUTHENTICATION_ENABLED
+          valueFrom:
+            configMapKeyRef:
+              key: SPARK_RPC_AUTHENTICATION_ENABLED
+              name: spark-worker-4-config-frra
+        - name: SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED
+          valueFrom:
+            configMapKeyRef:
+              key: SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED
+              name: spark-worker-4-config-frra
+        - name: SPARK_SSL_ENABLED
+          valueFrom:
+            configMapKeyRef:
+              key: SPARK_SSL_ENABLED
+              name: spark-worker-4-config-frra
+        image: us.gcr.io/course-project-330721/pob6/spark:latest
+        imagePullPolicy: Always
+        name: spark-1
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+status:
+  availableReplicas: 3
+  conditions:
+  - lastTransitionTime: "2021-11-28T15:27:54Z"
+    lastUpdateTime: "2021-11-28T15:27:54Z"
+    message: Deployment has minimum availability.
+    reason: MinimumReplicasAvailable
+    status: "True"
+    type: Available
+  - lastTransitionTime: "2021-11-28T15:27:51Z"
+    lastUpdateTime: "2021-11-28T15:27:54Z"
+    message: ReplicaSet "spark-worker-4-5885d989dc" has successfully progressed.
+    reason: NewReplicaSetAvailable
+    status: "True"
+    type: Progressing
+  observedGeneration: 1
+  readyReplicas: 3
+  replicas: 3
+  updatedReplicas: 3

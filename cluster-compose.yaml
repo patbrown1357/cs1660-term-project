@@ -1,0 +1,3884 @@
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    creationTimestamp: "2021-11-28T21:58:23Z"
+    generateName: gui-driver-75f6b6bbcf-
+    labels:
+      app: gui-driver
+      pod-template-hash: 75f6b6bbcf
+    name: gui-driver-75f6b6bbcf-jmpjg
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: gui-driver-75f6b6bbcf
+      uid: fa966d1f-a995-456b-a7b9-75697e842711
+    resourceVersion: "154244"
+    uid: 06defdcf-3978-425c-a267-36107f304fe4
+  spec:
+    containers:
+    - image: us.gcr.io/course-project-330721/pob6/gui_driver:latest
+      imagePullPolicy: Always
+      name: gui-driver-1
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-6gdd7
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    nodeName: gke-spark-leader-cluster-default-pool-d3ecf7f8-82x6
+    preemptionPolicy: PreemptLowerPriority
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: kube-api-access-6gdd7
+      projected:
+        defaultMode: 420
+        sources:
+        - serviceAccountToken:
+            expirationSeconds: 3607
+            path: token
+        - configMap:
+            items:
+            - key: ca.crt
+              path: ca.crt
+            name: kube-root-ca.crt
+        - downwardAPI:
+            items:
+            - fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+              path: namespace
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2021-11-28T21:58:24Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2021-11-28T21:58:26Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2021-11-28T21:58:26Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2021-11-28T21:58:24Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: containerd://19a5c4db6dfb9c075f2e510bec09632357dfde6a83434d91e9ec1ab2294bc756
+      image: us.gcr.io/course-project-330721/pob6/gui_driver:latest
+      imageID: us.gcr.io/course-project-330721/pob6/gui_driver@sha256:1e5a310b1538576fd248953ec3cfbf7c63878696324e62950bc646ab76dd96e0
+      lastState: {}
+      name: gui-driver-1
+      ready: true
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2021-11-28T21:58:25Z"
+    hostIP: 10.128.0.24
+    phase: Running
+    podIP: 10.56.2.22
+    podIPs:
+    - ip: 10.56.2.22
+    qosClass: BestEffort
+    startTime: "2021-11-28T21:58:24Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    creationTimestamp: "2021-11-28T21:58:23Z"
+    generateName: gui-driver-75f6b6bbcf-
+    labels:
+      app: gui-driver
+      pod-template-hash: 75f6b6bbcf
+    name: gui-driver-75f6b6bbcf-w7hp9
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: gui-driver-75f6b6bbcf
+      uid: fa966d1f-a995-456b-a7b9-75697e842711
+    resourceVersion: "154252"
+    uid: 81ab11f7-bd7a-4b84-8aaf-df5a2dd84211
+  spec:
+    containers:
+    - image: us.gcr.io/course-project-330721/pob6/gui_driver:latest
+      imagePullPolicy: Always
+      name: gui-driver-1
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-wfxtr
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    nodeName: gke-spark-leader-cluster-default-pool-d3ecf7f8-zbpd
+    preemptionPolicy: PreemptLowerPriority
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: kube-api-access-wfxtr
+      projected:
+        defaultMode: 420
+        sources:
+        - serviceAccountToken:
+            expirationSeconds: 3607
+            path: token
+        - configMap:
+            items:
+            - key: ca.crt
+              path: ca.crt
+            name: kube-root-ca.crt
+        - downwardAPI:
+            items:
+            - fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+              path: namespace
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2021-11-28T21:58:24Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2021-11-28T21:58:26Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2021-11-28T21:58:26Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2021-11-28T21:58:24Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: containerd://0f1d054bd86386346274649ba05b473166d5d0eed678fed88347298783626ebd
+      image: us.gcr.io/course-project-330721/pob6/gui_driver:latest
+      imageID: us.gcr.io/course-project-330721/pob6/gui_driver@sha256:1e5a310b1538576fd248953ec3cfbf7c63878696324e62950bc646ab76dd96e0
+      lastState: {}
+      name: gui-driver-1
+      ready: true
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2021-11-28T21:58:25Z"
+    hostIP: 10.128.0.23
+    phase: Running
+    podIP: 10.56.1.20
+    podIPs:
+    - ip: 10.56.1.20
+    qosClass: BestEffort
+    startTime: "2021-11-28T21:58:24Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    creationTimestamp: "2021-11-28T21:58:23Z"
+    generateName: gui-driver-75f6b6bbcf-
+    labels:
+      app: gui-driver
+      pod-template-hash: 75f6b6bbcf
+    name: gui-driver-75f6b6bbcf-w8jg5
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: gui-driver-75f6b6bbcf
+      uid: fa966d1f-a995-456b-a7b9-75697e842711
+    resourceVersion: "154246"
+    uid: 19025166-2e2e-4fb8-80d9-04d171b02318
+  spec:
+    containers:
+    - image: us.gcr.io/course-project-330721/pob6/gui_driver:latest
+      imagePullPolicy: Always
+      name: gui-driver-1
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-v5dll
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    nodeName: gke-spark-leader-cluster-default-pool-d3ecf7f8-lvqp
+    preemptionPolicy: PreemptLowerPriority
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: kube-api-access-v5dll
+      projected:
+        defaultMode: 420
+        sources:
+        - serviceAccountToken:
+            expirationSeconds: 3607
+            path: token
+        - configMap:
+            items:
+            - key: ca.crt
+              path: ca.crt
+            name: kube-root-ca.crt
+        - downwardAPI:
+            items:
+            - fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+              path: namespace
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2021-11-28T21:58:23Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2021-11-28T21:58:26Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2021-11-28T21:58:26Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2021-11-28T21:58:23Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: containerd://ec04c583cec3630b36005cae32f8d222252203e0a1a33f5efb10511f18dc0360
+      image: us.gcr.io/course-project-330721/pob6/gui_driver:latest
+      imageID: us.gcr.io/course-project-330721/pob6/gui_driver@sha256:1e5a310b1538576fd248953ec3cfbf7c63878696324e62950bc646ab76dd96e0
+      lastState: {}
+      name: gui-driver-1
+      ready: true
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2021-11-28T21:58:25Z"
+    hostIP: 10.128.0.22
+    phase: Running
+    podIP: 10.56.0.29
+    podIPs:
+    - ip: 10.56.0.29
+    qosClass: BestEffort
+    startTime: "2021-11-28T21:58:23Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    creationTimestamp: "2021-11-28T18:16:09Z"
+    generateName: hadoop-datanode-1-1-748b645dc-
+    labels:
+      app: hadoop-datanode-1-1
+      pod-template-hash: 748b645dc
+    name: hadoop-datanode-1-1-748b645dc-hfwrn
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: hadoop-datanode-1-1-748b645dc
+      uid: ce1f381a-3d93-4023-9238-e3459cfa253a
+    resourceVersion: "73205"
+    uid: 3b7afa4a-092f-47b6-90a6-fd04b591f341
+  spec:
+    containers:
+    - env:
+      - name: SERVICE_PRECONDITION
+        valueFrom:
+          configMapKeyRef:
+            key: SERVICE_PRECONDITION
+            name: hadoop-datanode-1-1-config-dp7v
+      - name: CORE_CONF_fs_defaultFS
+        valueFrom:
+          configMapKeyRef:
+            key: CORE_CONF_fs_defaultFS
+            name: hadoop-datanode-1-1-config-dp7v
+      - name: CORE_CONF_hadoop_http_staticuser_user
+        valueFrom:
+          configMapKeyRef:
+            key: CORE_CONF_hadoop_http_staticuser_user
+            name: hadoop-datanode-1-1-config-dp7v
+      - name: CORE_CONF_hadoop_proxyuser_hue_hosts
+        valueFrom:
+          configMapKeyRef:
+            key: CORE_CONF_hadoop_proxyuser_hue_hosts
+            name: hadoop-datanode-1-1-config-dp7v
+      - name: CORE_CONF_hadoop_proxyuser_hue_groups
+        valueFrom:
+          configMapKeyRef:
+            key: CORE_CONF_hadoop_proxyuser_hue_groups
+            name: hadoop-datanode-1-1-config-dp7v
+      - name: CORE_CONF_io_compression_codecs
+        valueFrom:
+          configMapKeyRef:
+            key: CORE_CONF_io_compression_codecs
+            name: hadoop-datanode-1-1-config-dp7v
+      - name: HDFS_CONF_dfs_webhdfs_enabled
+        valueFrom:
+          configMapKeyRef:
+            key: HDFS_CONF_dfs_webhdfs_enabled
+            name: hadoop-datanode-1-1-config-dp7v
+      - name: HDFS_CONF_dfs_permissions_enabled
+        valueFrom:
+          configMapKeyRef:
+            key: HDFS_CONF_dfs_permissions_enabled
+            name: hadoop-datanode-1-1-config-dp7v
+      - name: HDFS_CONF_dfs_namenode_datanode_registration_ip___hostname___check
+        valueFrom:
+          configMapKeyRef:
+            key: HDFS_CONF_dfs_namenode_datanode_registration_ip___hostname___check
+            name: hadoop-datanode-1-1-config-dp7v
+      image: us.gcr.io/course-project-330721/hadoop-datanode:latest
+      imagePullPolicy: Always
+      name: hadoop-datanode-1
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-zdkm8
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    nodeName: gke-spark-leader-cluster-default-pool-d3ecf7f8-82x6
+    preemptionPolicy: PreemptLowerPriority
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: kube-api-access-zdkm8
+      projected:
+        defaultMode: 420
+        sources:
+        - serviceAccountToken:
+            expirationSeconds: 3607
+            path: token
+        - configMap:
+            items:
+            - key: ca.crt
+              path: ca.crt
+            name: kube-root-ca.crt
+        - downwardAPI:
+            items:
+            - fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+              path: namespace
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2021-11-28T18:16:09Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2021-11-28T18:18:39Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2021-11-28T18:18:39Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2021-11-28T18:16:09Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: containerd://0ed1cbf4515e6a926ede7ae0ece2d0d6edfff7781eb6695313cf3599e05e1265
+      image: us.gcr.io/course-project-330721/hadoop-datanode:latest
+      imageID: us.gcr.io/course-project-330721/hadoop-datanode@sha256:928c3d54bf02fe08648a052b501a96bb62c200699801cfb3f67d4bf52abeea37
+      lastState:
+        terminated:
+          containerID: containerd://f6233facd29c95b9ce5d1ac04201150cb9ba03c29e186f6d6213a58139cf1327
+          exitCode: 0
+          finishedAt: "2021-11-28T18:18:38Z"
+          reason: Completed
+          startedAt: "2021-11-28T18:16:10Z"
+      name: hadoop-datanode-1
+      ready: true
+      restartCount: 1
+      started: true
+      state:
+        running:
+          startedAt: "2021-11-28T18:18:38Z"
+    hostIP: 10.128.0.24
+    phase: Running
+    podIP: 10.56.2.17
+    podIPs:
+    - ip: 10.56.2.17
+    qosClass: BestEffort
+    startTime: "2021-11-28T18:16:09Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    creationTimestamp: "2021-11-28T18:16:09Z"
+    generateName: hadoop-datanode-1-1-748b645dc-
+    labels:
+      app: hadoop-datanode-1-1
+      pod-template-hash: 748b645dc
+    name: hadoop-datanode-1-1-748b645dc-wt6mg
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: hadoop-datanode-1-1-748b645dc
+      uid: ce1f381a-3d93-4023-9238-e3459cfa253a
+    resourceVersion: "73209"
+    uid: e8ba0544-93a8-405e-ac72-711a01d2c1ad
+  spec:
+    containers:
+    - env:
+      - name: SERVICE_PRECONDITION
+        valueFrom:
+          configMapKeyRef:
+            key: SERVICE_PRECONDITION
+            name: hadoop-datanode-1-1-config-dp7v
+      - name: CORE_CONF_fs_defaultFS
+        valueFrom:
+          configMapKeyRef:
+            key: CORE_CONF_fs_defaultFS
+            name: hadoop-datanode-1-1-config-dp7v
+      - name: CORE_CONF_hadoop_http_staticuser_user
+        valueFrom:
+          configMapKeyRef:
+            key: CORE_CONF_hadoop_http_staticuser_user
+            name: hadoop-datanode-1-1-config-dp7v
+      - name: CORE_CONF_hadoop_proxyuser_hue_hosts
+        valueFrom:
+          configMapKeyRef:
+            key: CORE_CONF_hadoop_proxyuser_hue_hosts
+            name: hadoop-datanode-1-1-config-dp7v
+      - name: CORE_CONF_hadoop_proxyuser_hue_groups
+        valueFrom:
+          configMapKeyRef:
+            key: CORE_CONF_hadoop_proxyuser_hue_groups
+            name: hadoop-datanode-1-1-config-dp7v
+      - name: CORE_CONF_io_compression_codecs
+        valueFrom:
+          configMapKeyRef:
+            key: CORE_CONF_io_compression_codecs
+            name: hadoop-datanode-1-1-config-dp7v
+      - name: HDFS_CONF_dfs_webhdfs_enabled
+        valueFrom:
+          configMapKeyRef:
+            key: HDFS_CONF_dfs_webhdfs_enabled
+            name: hadoop-datanode-1-1-config-dp7v
+      - name: HDFS_CONF_dfs_permissions_enabled
+        valueFrom:
+          configMapKeyRef:
+            key: HDFS_CONF_dfs_permissions_enabled
+            name: hadoop-datanode-1-1-config-dp7v
+      - name: HDFS_CONF_dfs_namenode_datanode_registration_ip___hostname___check
+        valueFrom:
+          configMapKeyRef:
+            key: HDFS_CONF_dfs_namenode_datanode_registration_ip___hostname___check
+            name: hadoop-datanode-1-1-config-dp7v
+      image: us.gcr.io/course-project-330721/hadoop-datanode:latest
+      imagePullPolicy: Always
+      name: hadoop-datanode-1
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-w779p
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    nodeName: gke-spark-leader-cluster-default-pool-d3ecf7f8-lvqp
+    preemptionPolicy: PreemptLowerPriority
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: kube-api-access-w779p
+      projected:
+        defaultMode: 420
+        sources:
+        - serviceAccountToken:
+            expirationSeconds: 3607
+            path: token
+        - configMap:
+            items:
+            - key: ca.crt
+              path: ca.crt
+            name: kube-root-ca.crt
+        - downwardAPI:
+            items:
+            - fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+              path: namespace
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2021-11-28T18:16:09Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2021-11-28T18:18:39Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2021-11-28T18:18:39Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2021-11-28T18:16:09Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: containerd://d13f10e8f37228caead075a50cf086810addb3040e24795a233b6be83a9dd56e
+      image: us.gcr.io/course-project-330721/hadoop-datanode:latest
+      imageID: us.gcr.io/course-project-330721/hadoop-datanode@sha256:928c3d54bf02fe08648a052b501a96bb62c200699801cfb3f67d4bf52abeea37
+      lastState:
+        terminated:
+          containerID: containerd://36a7809c976ba6cebfebfa01e72b3a2a020ab13dc19c43b7c7e4352f99c82f02
+          exitCode: 0
+          finishedAt: "2021-11-28T18:18:38Z"
+          reason: Completed
+          startedAt: "2021-11-28T18:16:10Z"
+      name: hadoop-datanode-1
+      ready: true
+      restartCount: 1
+      started: true
+      state:
+        running:
+          startedAt: "2021-11-28T18:18:39Z"
+    hostIP: 10.128.0.22
+    phase: Running
+    podIP: 10.56.0.24
+    podIPs:
+    - ip: 10.56.0.24
+    qosClass: BestEffort
+    startTime: "2021-11-28T18:16:09Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    creationTimestamp: "2021-11-28T17:15:40Z"
+    generateName: hadoop-namenode-646c8884fc-
+    labels:
+      app: hadoop-namenode
+      pod-template-hash: 646c8884fc
+    name: hadoop-namenode-646c8884fc-ssl7w
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: hadoop-namenode-646c8884fc
+      uid: 81c39794-e1a9-4421-bc15-4416719db73b
+    resourceVersion: "49564"
+    uid: 466cb2bb-ee93-4c1c-9978-91ff1389b0f5
+  spec:
+    containers:
+    - env:
+      - name: CLUSTER_NAME
+        valueFrom:
+          configMapKeyRef:
+            key: CLUSTER_NAME
+            name: hadoop-namenode-config-zpsj
+      - name: CORE_CONF_fs_defaultFS
+        valueFrom:
+          configMapKeyRef:
+            key: CORE_CONF_fs_defaultFS
+            name: hadoop-namenode-config-zpsj
+      - name: CORE_CONF_hadoop_http_staticuser_user
+        valueFrom:
+          configMapKeyRef:
+            key: CORE_CONF_hadoop_http_staticuser_user
+            name: hadoop-namenode-config-zpsj
+      - name: CORE_CONF_hadoop_proxyuser_hue_hosts
+        valueFrom:
+          configMapKeyRef:
+            key: CORE_CONF_hadoop_proxyuser_hue_hosts
+            name: hadoop-namenode-config-zpsj
+      - name: CORE_CONF_hadoop_proxyuser_hue_groups
+        valueFrom:
+          configMapKeyRef:
+            key: CORE_CONF_hadoop_proxyuser_hue_groups
+            name: hadoop-namenode-config-zpsj
+      - name: CORE_CONF_io_compression_codecs
+        valueFrom:
+          configMapKeyRef:
+            key: CORE_CONF_io_compression_codecs
+            name: hadoop-namenode-config-zpsj
+      - name: HDFS_CONF_dfs_webhdfs_enabled
+        valueFrom:
+          configMapKeyRef:
+            key: HDFS_CONF_dfs_webhdfs_enabled
+            name: hadoop-namenode-config-zpsj
+      - name: HDFS_CONF_dfs_permissions_enabled
+        valueFrom:
+          configMapKeyRef:
+            key: HDFS_CONF_dfs_permissions_enabled
+            name: hadoop-namenode-config-zpsj
+      - name: HDFS_CONF_dfs_namenode_datanode_registration_ip___hostname___check
+        valueFrom:
+          configMapKeyRef:
+            key: HDFS_CONF_dfs_namenode_datanode_registration_ip___hostname___check
+            name: hadoop-namenode-config-zpsj
+      image: us.gcr.io/course-project-330721/hadoop-namenode:latest
+      imagePullPolicy: Always
+      name: hadoop-namenode-1
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-5f6cf
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    nodeName: gke-spark-leader-cluster-default-pool-d3ecf7f8-lvqp
+    preemptionPolicy: PreemptLowerPriority
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: kube-api-access-5f6cf
+      projected:
+        defaultMode: 420
+        sources:
+        - serviceAccountToken:
+            expirationSeconds: 3607
+            path: token
+        - configMap:
+            items:
+            - key: ca.crt
+              path: ca.crt
+            name: kube-root-ca.crt
+        - downwardAPI:
+            items:
+            - fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+              path: namespace
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2021-11-28T17:15:41Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2021-11-28T17:16:18Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2021-11-28T17:16:18Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2021-11-28T17:15:41Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: containerd://6789fd80706a01d5685711d842ff5b111dcaa5468fbc79182d4c7be302f01227
+      image: us.gcr.io/course-project-330721/hadoop-namenode:latest
+      imageID: us.gcr.io/course-project-330721/hadoop-namenode@sha256:329c93fc03650d09e9a5ef7e607952ca91532101163bbe7b737620b0b43dbf96
+      lastState: {}
+      name: hadoop-namenode-1
+      ready: true
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2021-11-28T17:16:18Z"
+    hostIP: 10.128.0.22
+    phase: Running
+    podIP: 10.56.0.17
+    podIPs:
+    - ip: 10.56.0.17
+    qosClass: BestEffort
+    startTime: "2021-11-28T17:15:41Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    creationTimestamp: "2021-11-28T15:31:27Z"
+    generateName: jupyter-notebook-5d6b68dcb6-
+    labels:
+      app: jupyter-notebook
+      pod-template-hash: 5d6b68dcb6
+    name: jupyter-notebook-5d6b68dcb6-c7r4p
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: jupyter-notebook-5d6b68dcb6
+      uid: 2a74afde-e100-4605-a29b-91927e9ee10e
+    resourceVersion: "11122"
+    uid: f4b403b9-ec1b-42fe-97dc-ad5d9c46b544
+  spec:
+    containers:
+    - image: us.gcr.io/course-project-330721/pob6/jupyter:latest
+      imagePullPolicy: Always
+      name: jupyter-1
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-cwjt6
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    nodeName: gke-spark-leader-cluster-default-pool-d3ecf7f8-lvqp
+    preemptionPolicy: PreemptLowerPriority
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: kube-api-access-cwjt6
+      projected:
+        defaultMode: 420
+        sources:
+        - serviceAccountToken:
+            expirationSeconds: 3607
+            path: token
+        - configMap:
+            items:
+            - key: ca.crt
+              path: ca.crt
+            name: kube-root-ca.crt
+        - downwardAPI:
+            items:
+            - fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+              path: namespace
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2021-11-28T15:31:27Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2021-11-28T15:31:45Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2021-11-28T15:31:45Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2021-11-28T15:31:27Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: containerd://0d44783ea8e741a6e4913b64824b29e98c676ab5dce0f4b0cf41add77a2e51fa
+      image: us.gcr.io/course-project-330721/pob6/jupyter:latest
+      imageID: us.gcr.io/course-project-330721/pob6/jupyter@sha256:2761b83b5d6216947284df106edc1ee99a2bb80ee1b61b8cb82603136adacc04
+      lastState: {}
+      name: jupyter-1
+      ready: true
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2021-11-28T15:31:45Z"
+    hostIP: 10.128.0.22
+    phase: Running
+    podIP: 10.56.0.16
+    podIPs:
+    - ip: 10.56.0.16
+    qosClass: BestEffort
+    startTime: "2021-11-28T15:31:27Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    creationTimestamp: "2021-11-28T15:31:27Z"
+    generateName: jupyter-notebook-5d6b68dcb6-
+    labels:
+      app: jupyter-notebook
+      pod-template-hash: 5d6b68dcb6
+    name: jupyter-notebook-5d6b68dcb6-lz4cv
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: jupyter-notebook-5d6b68dcb6
+      uid: 2a74afde-e100-4605-a29b-91927e9ee10e
+    resourceVersion: "11125"
+    uid: 11ebb77e-4c78-4431-bd76-0e300d451089
+  spec:
+    containers:
+    - image: us.gcr.io/course-project-330721/pob6/jupyter:latest
+      imagePullPolicy: Always
+      name: jupyter-1
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-ftk4m
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    nodeName: gke-spark-leader-cluster-default-pool-d3ecf7f8-82x6
+    preemptionPolicy: PreemptLowerPriority
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: kube-api-access-ftk4m
+      projected:
+        defaultMode: 420
+        sources:
+        - serviceAccountToken:
+            expirationSeconds: 3607
+            path: token
+        - configMap:
+            items:
+            - key: ca.crt
+              path: ca.crt
+            name: kube-root-ca.crt
+        - downwardAPI:
+            items:
+            - fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+              path: namespace
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2021-11-28T15:31:27Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2021-11-28T15:31:46Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2021-11-28T15:31:46Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2021-11-28T15:31:27Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: containerd://4de9f2a192493b53cf706d67a9fa52018d210358203a43555eaef93d4eb5cf85
+      image: us.gcr.io/course-project-330721/pob6/jupyter:latest
+      imageID: us.gcr.io/course-project-330721/pob6/jupyter@sha256:2761b83b5d6216947284df106edc1ee99a2bb80ee1b61b8cb82603136adacc04
+      lastState: {}
+      name: jupyter-1
+      ready: true
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2021-11-28T15:31:46Z"
+    hostIP: 10.128.0.24
+    phase: Running
+    podIP: 10.56.2.9
+    podIPs:
+    - ip: 10.56.2.9
+    qosClass: BestEffort
+    startTime: "2021-11-28T15:31:27Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    creationTimestamp: "2021-11-28T15:31:27Z"
+    generateName: jupyter-notebook-5d6b68dcb6-
+    labels:
+      app: jupyter-notebook
+      pod-template-hash: 5d6b68dcb6
+    name: jupyter-notebook-5d6b68dcb6-xmxd7
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: jupyter-notebook-5d6b68dcb6
+      uid: 2a74afde-e100-4605-a29b-91927e9ee10e
+    resourceVersion: "11138"
+    uid: bbb7401d-cf56-461b-a40b-c1b1aae56ac3
+  spec:
+    containers:
+    - image: us.gcr.io/course-project-330721/pob6/jupyter:latest
+      imagePullPolicy: Always
+      name: jupyter-1
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-8w2p2
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    nodeName: gke-spark-leader-cluster-default-pool-d3ecf7f8-zbpd
+    preemptionPolicy: PreemptLowerPriority
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: kube-api-access-8w2p2
+      projected:
+        defaultMode: 420
+        sources:
+        - serviceAccountToken:
+            expirationSeconds: 3607
+            path: token
+        - configMap:
+            items:
+            - key: ca.crt
+              path: ca.crt
+            name: kube-root-ca.crt
+        - downwardAPI:
+            items:
+            - fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+              path: namespace
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2021-11-28T15:31:27Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2021-11-28T15:31:47Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2021-11-28T15:31:47Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2021-11-28T15:31:27Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: containerd://59d0ed4aca44ce8ad7b59966ed1fbd4c9dc31cf556d2350e307bc2db17cfb973
+      image: us.gcr.io/course-project-330721/pob6/jupyter:latest
+      imageID: us.gcr.io/course-project-330721/pob6/jupyter@sha256:2761b83b5d6216947284df106edc1ee99a2bb80ee1b61b8cb82603136adacc04
+      lastState: {}
+      name: jupyter-1
+      ready: true
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2021-11-28T15:31:47Z"
+    hostIP: 10.128.0.23
+    phase: Running
+    podIP: 10.56.1.7
+    podIPs:
+    - ip: 10.56.1.7
+    qosClass: BestEffort
+    startTime: "2021-11-28T15:31:27Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    creationTimestamp: "2021-11-28T21:19:55Z"
+    generateName: sonar-6cbd6c8f4d-
+    labels:
+      app: sonar
+      pod-template-hash: 6cbd6c8f4d
+    name: sonar-6cbd6c8f4d-5lbkc
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: sonar-6cbd6c8f4d
+      uid: dcbd04ab-2da2-4811-b744-c19e3939f1af
+    resourceVersion: "139949"
+    uid: c9d5d4f0-1615-44ed-bccd-65b8f259bc9b
+  spec:
+    containers:
+    - image: us.gcr.io/course-project-330721/pob6/sonar:latest
+      imagePullPolicy: Always
+      name: sonar-1
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-48mpj
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    nodeName: gke-spark-leader-cluster-default-pool-d3ecf7f8-lvqp
+    preemptionPolicy: PreemptLowerPriority
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: kube-api-access-48mpj
+      projected:
+        defaultMode: 420
+        sources:
+        - serviceAccountToken:
+            expirationSeconds: 3607
+            path: token
+        - configMap:
+            items:
+            - key: ca.crt
+              path: ca.crt
+            name: kube-root-ca.crt
+        - downwardAPI:
+            items:
+            - fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+              path: namespace
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2021-11-28T21:19:57Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2021-11-28T21:20:15Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2021-11-28T21:20:15Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2021-11-28T21:19:56Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: containerd://8504aa3935508c772cccc337cf8b329e9fb07e765f1d451892b90560b65705ab
+      image: us.gcr.io/course-project-330721/pob6/sonar:latest
+      imageID: us.gcr.io/course-project-330721/pob6/sonar@sha256:1c356edb300bd20beb2d2e517c0b3d424dc86339fddd69a308070d2daafd2bec
+      lastState: {}
+      name: sonar-1
+      ready: true
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2021-11-28T21:20:14Z"
+    hostIP: 10.128.0.22
+    phase: Running
+    podIP: 10.56.0.26
+    podIPs:
+    - ip: 10.56.0.26
+    qosClass: BestEffort
+    startTime: "2021-11-28T21:19:57Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    creationTimestamp: "2021-11-28T21:19:55Z"
+    generateName: sonar-6cbd6c8f4d-
+    labels:
+      app: sonar
+      pod-template-hash: 6cbd6c8f4d
+    name: sonar-6cbd6c8f4d-nrp88
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: sonar-6cbd6c8f4d
+      uid: dcbd04ab-2da2-4811-b744-c19e3939f1af
+    resourceVersion: "139966"
+    uid: f4aa5a63-4870-45c8-9c03-08eebfc60e21
+  spec:
+    containers:
+    - image: us.gcr.io/course-project-330721/pob6/sonar:latest
+      imagePullPolicy: Always
+      name: sonar-1
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-nfxxn
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    nodeName: gke-spark-leader-cluster-default-pool-d3ecf7f8-82x6
+    preemptionPolicy: PreemptLowerPriority
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: kube-api-access-nfxxn
+      projected:
+        defaultMode: 420
+        sources:
+        - serviceAccountToken:
+            expirationSeconds: 3607
+            path: token
+        - configMap:
+            items:
+            - key: ca.crt
+              path: ca.crt
+            name: kube-root-ca.crt
+        - downwardAPI:
+            items:
+            - fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+              path: namespace
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2021-11-28T21:19:56Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2021-11-28T21:20:16Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2021-11-28T21:20:16Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2021-11-28T21:19:56Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: containerd://5bb0249520785a4c243c5b52b982204f318d9dc00bcaf061359e91dda2c40360
+      image: us.gcr.io/course-project-330721/pob6/sonar:latest
+      imageID: us.gcr.io/course-project-330721/pob6/sonar@sha256:1c356edb300bd20beb2d2e517c0b3d424dc86339fddd69a308070d2daafd2bec
+      lastState: {}
+      name: sonar-1
+      ready: true
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2021-11-28T21:20:16Z"
+    hostIP: 10.128.0.24
+    phase: Running
+    podIP: 10.56.2.19
+    podIPs:
+    - ip: 10.56.2.19
+    qosClass: BestEffort
+    startTime: "2021-11-28T21:19:56Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    creationTimestamp: "2021-11-28T21:19:55Z"
+    generateName: sonar-6cbd6c8f4d-
+    labels:
+      app: sonar
+      pod-template-hash: 6cbd6c8f4d
+    name: sonar-6cbd6c8f4d-stl4c
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: sonar-6cbd6c8f4d
+      uid: dcbd04ab-2da2-4811-b744-c19e3939f1af
+    resourceVersion: "139969"
+    uid: 6c4e3df2-1d94-4329-82f0-0a08937c6e56
+  spec:
+    containers:
+    - image: us.gcr.io/course-project-330721/pob6/sonar:latest
+      imagePullPolicy: Always
+      name: sonar-1
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-7grd6
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    nodeName: gke-spark-leader-cluster-default-pool-d3ecf7f8-zbpd
+    preemptionPolicy: PreemptLowerPriority
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: kube-api-access-7grd6
+      projected:
+        defaultMode: 420
+        sources:
+        - serviceAccountToken:
+            expirationSeconds: 3607
+            path: token
+        - configMap:
+            items:
+            - key: ca.crt
+              path: ca.crt
+            name: kube-root-ca.crt
+        - downwardAPI:
+            items:
+            - fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+              path: namespace
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2021-11-28T21:19:57Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2021-11-28T21:20:16Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2021-11-28T21:20:16Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2021-11-28T21:19:56Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: containerd://e141f917057220eb3a05d1fa4d1ed041bf50cad6cd1cfc413c3dd5757e243b6c
+      image: us.gcr.io/course-project-330721/pob6/sonar:latest
+      imageID: us.gcr.io/course-project-330721/pob6/sonar@sha256:1c356edb300bd20beb2d2e517c0b3d424dc86339fddd69a308070d2daafd2bec
+      lastState: {}
+      name: sonar-1
+      ready: true
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2021-11-28T21:20:16Z"
+    hostIP: 10.128.0.23
+    phase: Running
+    podIP: 10.56.1.17
+    podIPs:
+    - ip: 10.56.1.17
+    qosClass: BestEffort
+    startTime: "2021-11-28T21:19:57Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    creationTimestamp: "2021-11-28T15:05:49Z"
+    generateName: spark-leader-9944bf6c7-
+    labels:
+      app: spark-leader
+      pod-template-hash: 9944bf6c7
+    name: spark-leader-9944bf6c7-687tq
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: spark-leader-9944bf6c7
+      uid: d522b8c0-803f-4208-bd39-414284eafca0
+    resourceVersion: "1289"
+    uid: f679ea59-d6ab-4a59-89fc-966f3ca12862
+  spec:
+    containers:
+    - env:
+      - name: SPARK_MODE
+        valueFrom:
+          configMapKeyRef:
+            key: SPARK_MODE
+            name: spark-leader-config-u4zm
+      - name: SPARK_RPC_AUTHENTICATION_ENABLED
+        valueFrom:
+          configMapKeyRef:
+            key: SPARK_RPC_AUTHENTICATION_ENABLED
+            name: spark-leader-config-u4zm
+      - name: SPARK_RPC_ENCRYPTION_ENABLED
+        valueFrom:
+          configMapKeyRef:
+            key: SPARK_RPC_ENCRYPTION_ENABLED
+            name: spark-leader-config-u4zm
+      - name: SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED
+        valueFrom:
+          configMapKeyRef:
+            key: SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED
+            name: spark-leader-config-u4zm
+      - name: SPARK_SSL_ENABLED
+        valueFrom:
+          configMapKeyRef:
+            key: SPARK_SSL_ENABLED
+            name: spark-leader-config-u4zm
+      image: us.gcr.io/course-project-330721/pob6/spark@sha256:43b28d68dda98dbb3496551213f8d69a8f963547b962a7e8d7f0843e3f0131ea
+      imagePullPolicy: IfNotPresent
+      name: spark-sha256-1
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-nwwk8
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    nodeName: gke-spark-leader-cluster-default-pool-d3ecf7f8-zbpd
+    preemptionPolicy: PreemptLowerPriority
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: kube-api-access-nwwk8
+      projected:
+        defaultMode: 420
+        sources:
+        - serviceAccountToken:
+            expirationSeconds: 3607
+            path: token
+        - configMap:
+            items:
+            - key: ca.crt
+              path: ca.crt
+            name: kube-root-ca.crt
+        - downwardAPI:
+            items:
+            - fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+              path: namespace
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2021-11-28T15:05:49Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2021-11-28T15:06:32Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2021-11-28T15:06:32Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2021-11-28T15:05:49Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: containerd://18e9f68cded2c6bd47d73cef66c5fe4d683bebf92ea3e9f4d4957358acd119c6
+      image: sha256:23eb1ad267ddc3373a372a72f12a78dc4d9c76d3008a3018665965c1b0f4e9dd
+      imageID: us.gcr.io/course-project-330721/pob6/spark@sha256:43b28d68dda98dbb3496551213f8d69a8f963547b962a7e8d7f0843e3f0131ea
+      lastState: {}
+      name: spark-sha256-1
+      ready: true
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2021-11-28T15:06:32Z"
+    hostIP: 10.128.0.23
+    phase: Running
+    podIP: 10.56.1.4
+    podIPs:
+    - ip: 10.56.1.4
+    qosClass: BestEffort
+    startTime: "2021-11-28T15:05:49Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    creationTimestamp: "2021-11-28T15:05:49Z"
+    generateName: spark-leader-9944bf6c7-
+    labels:
+      app: spark-leader
+      pod-template-hash: 9944bf6c7
+    name: spark-leader-9944bf6c7-jbwpz
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: spark-leader-9944bf6c7
+      uid: d522b8c0-803f-4208-bd39-414284eafca0
+    resourceVersion: "1339"
+    uid: 57eb1397-3bdd-4fe5-a5c5-c1b6c51a9600
+  spec:
+    containers:
+    - env:
+      - name: SPARK_MODE
+        valueFrom:
+          configMapKeyRef:
+            key: SPARK_MODE
+            name: spark-leader-config-u4zm
+      - name: SPARK_RPC_AUTHENTICATION_ENABLED
+        valueFrom:
+          configMapKeyRef:
+            key: SPARK_RPC_AUTHENTICATION_ENABLED
+            name: spark-leader-config-u4zm
+      - name: SPARK_RPC_ENCRYPTION_ENABLED
+        valueFrom:
+          configMapKeyRef:
+            key: SPARK_RPC_ENCRYPTION_ENABLED
+            name: spark-leader-config-u4zm
+      - name: SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED
+        valueFrom:
+          configMapKeyRef:
+            key: SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED
+            name: spark-leader-config-u4zm
+      - name: SPARK_SSL_ENABLED
+        valueFrom:
+          configMapKeyRef:
+            key: SPARK_SSL_ENABLED
+            name: spark-leader-config-u4zm
+      image: us.gcr.io/course-project-330721/pob6/spark@sha256:43b28d68dda98dbb3496551213f8d69a8f963547b962a7e8d7f0843e3f0131ea
+      imagePullPolicy: IfNotPresent
+      name: spark-sha256-1
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-56fs7
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    nodeName: gke-spark-leader-cluster-default-pool-d3ecf7f8-lvqp
+    preemptionPolicy: PreemptLowerPriority
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: kube-api-access-56fs7
+      projected:
+        defaultMode: 420
+        sources:
+        - serviceAccountToken:
+            expirationSeconds: 3607
+            path: token
+        - configMap:
+            items:
+            - key: ca.crt
+              path: ca.crt
+            name: kube-root-ca.crt
+        - downwardAPI:
+            items:
+            - fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+              path: namespace
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2021-11-28T15:05:49Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2021-11-28T15:06:37Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2021-11-28T15:06:37Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2021-11-28T15:05:49Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: containerd://2b1967adda93b85ad5ebbc05892648b0f7dd3eba0989bf90fa2e2d96cc9a78e1
+      image: sha256:23eb1ad267ddc3373a372a72f12a78dc4d9c76d3008a3018665965c1b0f4e9dd
+      imageID: us.gcr.io/course-project-330721/pob6/spark@sha256:43b28d68dda98dbb3496551213f8d69a8f963547b962a7e8d7f0843e3f0131ea
+      lastState: {}
+      name: spark-sha256-1
+      ready: true
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2021-11-28T15:06:36Z"
+    hostIP: 10.128.0.22
+    phase: Running
+    podIP: 10.56.0.6
+    podIPs:
+    - ip: 10.56.0.6
+    qosClass: BestEffort
+    startTime: "2021-11-28T15:05:49Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    creationTimestamp: "2021-11-28T15:05:49Z"
+    generateName: spark-leader-9944bf6c7-
+    labels:
+      app: spark-leader
+      pod-template-hash: 9944bf6c7
+    name: spark-leader-9944bf6c7-pzjg5
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: spark-leader-9944bf6c7
+      uid: d522b8c0-803f-4208-bd39-414284eafca0
+    resourceVersion: "1343"
+    uid: fbcf5beb-854e-4955-b71c-e28620ad5888
+  spec:
+    containers:
+    - env:
+      - name: SPARK_MODE
+        valueFrom:
+          configMapKeyRef:
+            key: SPARK_MODE
+            name: spark-leader-config-u4zm
+      - name: SPARK_RPC_AUTHENTICATION_ENABLED
+        valueFrom:
+          configMapKeyRef:
+            key: SPARK_RPC_AUTHENTICATION_ENABLED
+            name: spark-leader-config-u4zm
+      - name: SPARK_RPC_ENCRYPTION_ENABLED
+        valueFrom:
+          configMapKeyRef:
+            key: SPARK_RPC_ENCRYPTION_ENABLED
+            name: spark-leader-config-u4zm
+      - name: SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED
+        valueFrom:
+          configMapKeyRef:
+            key: SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED
+            name: spark-leader-config-u4zm
+      - name: SPARK_SSL_ENABLED
+        valueFrom:
+          configMapKeyRef:
+            key: SPARK_SSL_ENABLED
+            name: spark-leader-config-u4zm
+      image: us.gcr.io/course-project-330721/pob6/spark@sha256:43b28d68dda98dbb3496551213f8d69a8f963547b962a7e8d7f0843e3f0131ea
+      imagePullPolicy: IfNotPresent
+      name: spark-sha256-1
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-q5r42
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    nodeName: gke-spark-leader-cluster-default-pool-d3ecf7f8-lvqp
+    preemptionPolicy: PreemptLowerPriority
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: kube-api-access-q5r42
+      projected:
+        defaultMode: 420
+        sources:
+        - serviceAccountToken:
+            expirationSeconds: 3607
+            path: token
+        - configMap:
+            items:
+            - key: ca.crt
+              path: ca.crt
+            name: kube-root-ca.crt
+        - downwardAPI:
+            items:
+            - fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+              path: namespace
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2021-11-28T15:05:49Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2021-11-28T15:06:37Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2021-11-28T15:06:37Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2021-11-28T15:05:49Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: containerd://930ea405a468c794f2cc12c1c7db191db6a9d5f5fcf08c7ad90e933ff4a66aab
+      image: sha256:23eb1ad267ddc3373a372a72f12a78dc4d9c76d3008a3018665965c1b0f4e9dd
+      imageID: us.gcr.io/course-project-330721/pob6/spark@sha256:43b28d68dda98dbb3496551213f8d69a8f963547b962a7e8d7f0843e3f0131ea
+      lastState: {}
+      name: spark-sha256-1
+      ready: true
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2021-11-28T15:06:36Z"
+    hostIP: 10.128.0.22
+    phase: Running
+    podIP: 10.56.0.5
+    podIPs:
+    - ip: 10.56.0.5
+    qosClass: BestEffort
+    startTime: "2021-11-28T15:05:49Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    creationTimestamp: "2021-11-28T15:27:51Z"
+    generateName: spark-worker-4-5885d989dc-
+    labels:
+      app: spark-worker-4
+      pod-template-hash: 5885d989dc
+    name: spark-worker-4-5885d989dc-cqmrf
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: spark-worker-4-5885d989dc
+      uid: 13caf2e3-84e3-49f7-9c67-68f498dfc310
+    resourceVersion: "9701"
+    uid: 93118bc0-a374-4f23-a8ee-b821c23dd527
+  spec:
+    containers:
+    - env:
+      - name: SPARK_MODE
+        valueFrom:
+          configMapKeyRef:
+            key: SPARK_MODE
+            name: spark-worker-4-config-frra
+      - name: SPARK_MASTER_URL
+        valueFrom:
+          configMapKeyRef:
+            key: SPARK_MASTER_URL
+            name: spark-worker-4-config-frra
+      - name: SPARK_WORKER_MEMORY
+        valueFrom:
+          configMapKeyRef:
+            key: SPARK_WORKER_MEMORY
+            name: spark-worker-4-config-frra
+      - name: SPARK_WORKER_CORES
+        valueFrom:
+          configMapKeyRef:
+            key: SPARK_WORKER_CORES
+            name: spark-worker-4-config-frra
+      - name: SPARK_RPC_AUTHENTICATION_ENABLED
+        valueFrom:
+          configMapKeyRef:
+            key: SPARK_RPC_AUTHENTICATION_ENABLED
+            name: spark-worker-4-config-frra
+      - name: SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED
+        valueFrom:
+          configMapKeyRef:
+            key: SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED
+            name: spark-worker-4-config-frra
+      - name: SPARK_SSL_ENABLED
+        valueFrom:
+          configMapKeyRef:
+            key: SPARK_SSL_ENABLED
+            name: spark-worker-4-config-frra
+      image: us.gcr.io/course-project-330721/pob6/spark:latest
+      imagePullPolicy: Always
+      name: spark-1
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-f9q8b
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    nodeName: gke-spark-leader-cluster-default-pool-d3ecf7f8-lvqp
+    preemptionPolicy: PreemptLowerPriority
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: kube-api-access-f9q8b
+      projected:
+        defaultMode: 420
+        sources:
+        - serviceAccountToken:
+            expirationSeconds: 3607
+            path: token
+        - configMap:
+            items:
+            - key: ca.crt
+              path: ca.crt
+            name: kube-root-ca.crt
+        - downwardAPI:
+            items:
+            - fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+              path: namespace
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2021-11-28T15:27:51Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2021-11-28T15:27:54Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2021-11-28T15:27:54Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2021-11-28T15:27:51Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: containerd://46b436fe845c923bf3ec39a9c101f6a7d6c17451474357c0e90ec437871a2e1a
+      image: us.gcr.io/course-project-330721/pob6/spark:latest
+      imageID: us.gcr.io/course-project-330721/pob6/spark@sha256:43b28d68dda98dbb3496551213f8d69a8f963547b962a7e8d7f0843e3f0131ea
+      lastState: {}
+      name: spark-1
+      ready: true
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2021-11-28T15:27:53Z"
+    hostIP: 10.128.0.22
+    phase: Running
+    podIP: 10.56.0.15
+    podIPs:
+    - ip: 10.56.0.15
+    qosClass: BestEffort
+    startTime: "2021-11-28T15:27:51Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    creationTimestamp: "2021-11-28T15:27:51Z"
+    generateName: spark-worker-4-5885d989dc-
+    labels:
+      app: spark-worker-4
+      pod-template-hash: 5885d989dc
+    name: spark-worker-4-5885d989dc-fwjb6
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: spark-worker-4-5885d989dc
+      uid: 13caf2e3-84e3-49f7-9c67-68f498dfc310
+    resourceVersion: "9698"
+    uid: 17402424-47b1-4f7e-844b-6d513b357113
+  spec:
+    containers:
+    - env:
+      - name: SPARK_MODE
+        valueFrom:
+          configMapKeyRef:
+            key: SPARK_MODE
+            name: spark-worker-4-config-frra
+      - name: SPARK_MASTER_URL
+        valueFrom:
+          configMapKeyRef:
+            key: SPARK_MASTER_URL
+            name: spark-worker-4-config-frra
+      - name: SPARK_WORKER_MEMORY
+        valueFrom:
+          configMapKeyRef:
+            key: SPARK_WORKER_MEMORY
+            name: spark-worker-4-config-frra
+      - name: SPARK_WORKER_CORES
+        valueFrom:
+          configMapKeyRef:
+            key: SPARK_WORKER_CORES
+            name: spark-worker-4-config-frra
+      - name: SPARK_RPC_AUTHENTICATION_ENABLED
+        valueFrom:
+          configMapKeyRef:
+            key: SPARK_RPC_AUTHENTICATION_ENABLED
+            name: spark-worker-4-config-frra
+      - name: SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED
+        valueFrom:
+          configMapKeyRef:
+            key: SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED
+            name: spark-worker-4-config-frra
+      - name: SPARK_SSL_ENABLED
+        valueFrom:
+          configMapKeyRef:
+            key: SPARK_SSL_ENABLED
+            name: spark-worker-4-config-frra
+      image: us.gcr.io/course-project-330721/pob6/spark:latest
+      imagePullPolicy: Always
+      name: spark-1
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-qn5bt
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    nodeName: gke-spark-leader-cluster-default-pool-d3ecf7f8-82x6
+    preemptionPolicy: PreemptLowerPriority
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: kube-api-access-qn5bt
+      projected:
+        defaultMode: 420
+        sources:
+        - serviceAccountToken:
+            expirationSeconds: 3607
+            path: token
+        - configMap:
+            items:
+            - key: ca.crt
+              path: ca.crt
+            name: kube-root-ca.crt
+        - downwardAPI:
+            items:
+            - fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+              path: namespace
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2021-11-28T15:27:51Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2021-11-28T15:27:53Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2021-11-28T15:27:53Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2021-11-28T15:27:51Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: containerd://fba0b95a6418a74d89daf8e1653c0fc2d3b2e705c11a59a414ba6bffdf6b6645
+      image: us.gcr.io/course-project-330721/pob6/spark:latest
+      imageID: us.gcr.io/course-project-330721/pob6/spark@sha256:43b28d68dda98dbb3496551213f8d69a8f963547b962a7e8d7f0843e3f0131ea
+      lastState: {}
+      name: spark-1
+      ready: true
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2021-11-28T15:27:53Z"
+    hostIP: 10.128.0.24
+    phase: Running
+    podIP: 10.56.2.8
+    podIPs:
+    - ip: 10.56.2.8
+    qosClass: BestEffort
+    startTime: "2021-11-28T15:27:51Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    creationTimestamp: "2021-11-28T15:27:51Z"
+    generateName: spark-worker-4-5885d989dc-
+    labels:
+      app: spark-worker-4
+      pod-template-hash: 5885d989dc
+    name: spark-worker-4-5885d989dc-zpxxt
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: spark-worker-4-5885d989dc
+      uid: 13caf2e3-84e3-49f7-9c67-68f498dfc310
+    resourceVersion: "9693"
+    uid: 8417ebb7-0ea7-4c83-b542-73a3e8f92e70
+  spec:
+    containers:
+    - env:
+      - name: SPARK_MODE
+        valueFrom:
+          configMapKeyRef:
+            key: SPARK_MODE
+            name: spark-worker-4-config-frra
+      - name: SPARK_MASTER_URL
+        valueFrom:
+          configMapKeyRef:
+            key: SPARK_MASTER_URL
+            name: spark-worker-4-config-frra
+      - name: SPARK_WORKER_MEMORY
+        valueFrom:
+          configMapKeyRef:
+            key: SPARK_WORKER_MEMORY
+            name: spark-worker-4-config-frra
+      - name: SPARK_WORKER_CORES
+        valueFrom:
+          configMapKeyRef:
+            key: SPARK_WORKER_CORES
+            name: spark-worker-4-config-frra
+      - name: SPARK_RPC_AUTHENTICATION_ENABLED
+        valueFrom:
+          configMapKeyRef:
+            key: SPARK_RPC_AUTHENTICATION_ENABLED
+            name: spark-worker-4-config-frra
+      - name: SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED
+        valueFrom:
+          configMapKeyRef:
+            key: SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED
+            name: spark-worker-4-config-frra
+      - name: SPARK_SSL_ENABLED
+        valueFrom:
+          configMapKeyRef:
+            key: SPARK_SSL_ENABLED
+            name: spark-worker-4-config-frra
+      image: us.gcr.io/course-project-330721/pob6/spark:latest
+      imagePullPolicy: Always
+      name: spark-1
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access-zkczz
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    nodeName: gke-spark-leader-cluster-default-pool-d3ecf7f8-lvqp
+    preemptionPolicy: PreemptLowerPriority
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: kube-api-access-zkczz
+      projected:
+        defaultMode: 420
+        sources:
+        - serviceAccountToken:
+            expirationSeconds: 3607
+            path: token
+        - configMap:
+            items:
+            - key: ca.crt
+              path: ca.crt
+            name: kube-root-ca.crt
+        - downwardAPI:
+            items:
+            - fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+              path: namespace
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2021-11-28T15:27:51Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2021-11-28T15:27:53Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2021-11-28T15:27:53Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2021-11-28T15:27:51Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: containerd://636e9957acc721239c6d42e5b4618300b36e2aa40b6ed21438fa40c7529e3825
+      image: us.gcr.io/course-project-330721/pob6/spark:latest
+      imageID: us.gcr.io/course-project-330721/pob6/spark@sha256:43b28d68dda98dbb3496551213f8d69a8f963547b962a7e8d7f0843e3f0131ea
+      lastState: {}
+      name: spark-1
+      ready: true
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2021-11-28T15:27:53Z"
+    hostIP: 10.128.0.22
+    phase: Running
+    podIP: 10.56.0.14
+    podIPs:
+    - ip: 10.56.0.14
+    qosClass: BestEffort
+    startTime: "2021-11-28T15:27:51Z"
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      cloud.google.com/neg: '{"ingress":true}'
+    creationTimestamp: "2021-11-28T21:59:47Z"
+    finalizers:
+    - service.kubernetes.io/load-balancer-cleanup
+    labels:
+      app: gui-driver
+    name: gui-driver-service
+    namespace: default
+    resourceVersion: "154931"
+    uid: 84e93f00-b413-4d45-8014-e7291ce234bd
+  spec:
+    clusterIP: 10.60.12.142
+    clusterIPs:
+    - 10.60.12.142
+    externalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - nodePort: 31050
+      port: 80
+      protocol: TCP
+      targetPort: 80
+    selector:
+      app: gui-driver
+    sessionAffinity: None
+    type: LoadBalancer
+  status:
+    loadBalancer:
+      ingress:
+      - ip: 35.232.120.123
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      cloud.google.com/neg: '{"ingress":true}'
+    creationTimestamp: "2021-11-28T17:19:02Z"
+    generateName: hadoop-namenode-
+    labels:
+      app: hadoop-namenode
+    name: hadoop-namenode-brlkt
+    namespace: default
+    resourceVersion: "50566"
+    uid: 69bf2d27-a006-4434-8216-d6d60e345679
+  spec:
+    clusterIP: 10.60.15.138
+    clusterIPs:
+    - 10.60.15.138
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - port: 9000
+      protocol: TCP
+      targetPort: 9000
+    selector:
+      app: hadoop-namenode
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      cloud.google.com/neg: '{"ingress":true}'
+    creationTimestamp: "2021-11-28T17:17:23Z"
+    finalizers:
+    - service.kubernetes.io/load-balancer-cleanup
+    labels:
+      app: hadoop-namenode
+    name: hadoop-namenode-service
+    namespace: default
+    resourceVersion: "50173"
+    uid: 099bb3f3-2fae-4039-96eb-794ebb4aeccd
+  spec:
+    clusterIP: 10.60.14.105
+    clusterIPs:
+    - 10.60.14.105
+    externalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: 9870-to-9870-tcp
+      nodePort: 31029
+      port: 9870
+      protocol: TCP
+      targetPort: 9870
+    - name: 9000-to-9000-tcp
+      nodePort: 30212
+      port: 9000
+      protocol: TCP
+      targetPort: 9000
+    selector:
+      app: hadoop-namenode
+    sessionAffinity: None
+    type: LoadBalancer
+  status:
+    loadBalancer:
+      ingress:
+      - ip: 34.122.2.71
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      cloud.google.com/neg: '{"ingress":true}'
+    creationTimestamp: "2021-11-28T15:32:59Z"
+    finalizers:
+    - service.kubernetes.io/load-balancer-cleanup
+    labels:
+      app: jupyter-notebook
+    name: jupyter-notebook-service
+    namespace: default
+    resourceVersion: "11761"
+    uid: cb7473d7-2b17-426e-8ba3-e464cce60aa2
+  spec:
+    clusterIP: 10.60.1.174
+    clusterIPs:
+    - 10.60.1.174
+    externalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - nodePort: 30222
+      port: 8888
+      protocol: TCP
+      targetPort: 8888
+    selector:
+      app: jupyter-notebook
+    sessionAffinity: None
+    type: LoadBalancer
+  status:
+    loadBalancer:
+      ingress:
+      - ip: 104.154.132.92
+- apiVersion: v1
+  kind: Service
+  metadata:
+    creationTimestamp: "2021-11-28T15:04:40Z"
+    labels:
+      component: apiserver
+      provider: kubernetes
+    name: kubernetes
+    namespace: default
+    resourceVersion: "206"
+    uid: 675ec56e-d174-46cb-b340-65e73395f9b3
+  spec:
+    clusterIP: 10.60.0.1
+    clusterIPs:
+    - 10.60.0.1
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: https
+      port: 443
+      protocol: TCP
+      targetPort: 443
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      cloud.google.com/neg: '{"ingress":true}'
+    creationTimestamp: "2021-11-28T21:20:48Z"
+    finalizers:
+    - service.kubernetes.io/load-balancer-cleanup
+    labels:
+      app: sonar
+    name: sonar-service
+    namespace: default
+    resourceVersion: "140342"
+    uid: c590e51e-9245-4f51-b730-a3b96dd0f821
+  spec:
+    clusterIP: 10.60.12.87
+    clusterIPs:
+    - 10.60.12.87
+    externalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - nodePort: 32619
+      port: 9000
+      protocol: TCP
+      targetPort: 9000
+    selector:
+      app: sonar
+    sessionAffinity: None
+    type: LoadBalancer
+  status:
+    loadBalancer:
+      ingress:
+      - ip: 35.232.82.43
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      cloud.google.com/neg: '{"ingress":true}'
+    creationTimestamp: "2021-11-28T15:17:30Z"
+    generateName: spark-leader-
+    labels:
+      app: spark-leader
+    name: spark-leader-j9ftl
+    namespace: default
+    resourceVersion: "5777"
+    uid: d3caf5ab-7132-41c7-81b5-5e2df611b0f9
+  spec:
+    clusterIP: 10.60.6.21
+    clusterIPs:
+    - 10.60.6.21
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - port: 7077
+      protocol: TCP
+      targetPort: 7077
+    selector:
+      app: spark-leader
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      cloud.google.com/neg: '{"ingress":true}'
+    creationTimestamp: "2021-11-28T15:18:57Z"
+    generateName: spark-leader-
+    labels:
+      app: spark-leader
+    name: spark-leader-jp5wn
+    namespace: default
+    resourceVersion: "6314"
+    uid: e252af22-cb1e-4bf2-a1f8-d61f7cb9a075
+  spec:
+    clusterIP: 10.60.1.157
+    clusterIPs:
+    - 10.60.1.157
+    externalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - nodePort: 32046
+      port: 7077
+      protocol: TCP
+      targetPort: 7077
+    selector:
+      app: spark-leader
+    sessionAffinity: None
+    type: NodePort
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      cloud.google.com/neg: '{"ingress":true}'
+    creationTimestamp: "2021-11-28T15:06:30Z"
+    finalizers:
+    - service.kubernetes.io/load-balancer-cleanup
+    labels:
+      app: spark-leader
+    name: spark-leader-service
+    namespace: default
+    resourceVersion: "1668"
+    uid: abbece0f-3a57-41f6-9de2-e5eb56852af8
+  spec:
+    clusterIP: 10.60.15.131
+    clusterIPs:
+    - 10.60.15.131
+    externalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - nodePort: 32431
+      port: 8080
+      protocol: TCP
+      targetPort: 8080
+    selector:
+      app: spark-leader
+    sessionAffinity: None
+    type: LoadBalancer
+  status:
+    loadBalancer:
+      ingress:
+      - ip: 34.132.10.249
+- apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    annotations:
+      deployment.kubernetes.io/revision: "1"
+    creationTimestamp: "2021-11-28T21:58:23Z"
+    generation: 1
+    labels:
+      app: gui-driver
+    name: gui-driver
+    namespace: default
+    resourceVersion: "154254"
+    uid: 92473e05-b3af-4af6-bc07-1ea8ee803860
+  spec:
+    progressDeadlineSeconds: 600
+    replicas: 3
+    revisionHistoryLimit: 10
+    selector:
+      matchLabels:
+        app: gui-driver
+    strategy:
+      rollingUpdate:
+        maxSurge: 25%
+        maxUnavailable: 25%
+      type: RollingUpdate
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          app: gui-driver
+      spec:
+        containers:
+        - image: us.gcr.io/course-project-330721/pob6/gui_driver:latest
+          imagePullPolicy: Always
+          name: gui-driver-1
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+  status:
+    availableReplicas: 3
+    conditions:
+    - lastTransitionTime: "2021-11-28T21:58:26Z"
+      lastUpdateTime: "2021-11-28T21:58:26Z"
+      message: Deployment has minimum availability.
+      reason: MinimumReplicasAvailable
+      status: "True"
+      type: Available
+    - lastTransitionTime: "2021-11-28T21:58:23Z"
+      lastUpdateTime: "2021-11-28T21:58:26Z"
+      message: ReplicaSet "gui-driver-75f6b6bbcf" has successfully progressed.
+      reason: NewReplicaSetAvailable
+      status: "True"
+      type: Progressing
+    observedGeneration: 1
+    readyReplicas: 3
+    replicas: 3
+    updatedReplicas: 3
+- apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    annotations:
+      deployment.kubernetes.io/revision: "1"
+    creationTimestamp: "2021-11-28T18:16:09Z"
+    generation: 2
+    labels:
+      app: hadoop-datanode-1-1
+    name: hadoop-datanode-1-1
+    namespace: default
+    resourceVersion: "73416"
+    uid: ce078c3e-5838-4c09-9ffe-19ab56a88f69
+  spec:
+    progressDeadlineSeconds: 600
+    replicas: 2
+    revisionHistoryLimit: 10
+    selector:
+      matchLabels:
+        app: hadoop-datanode-1-1
+    strategy:
+      rollingUpdate:
+        maxSurge: 25%
+        maxUnavailable: 25%
+      type: RollingUpdate
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          app: hadoop-datanode-1-1
+      spec:
+        containers:
+        - env:
+          - name: SERVICE_PRECONDITION
+            valueFrom:
+              configMapKeyRef:
+                key: SERVICE_PRECONDITION
+                name: hadoop-datanode-1-1-config-dp7v
+          - name: CORE_CONF_fs_defaultFS
+            valueFrom:
+              configMapKeyRef:
+                key: CORE_CONF_fs_defaultFS
+                name: hadoop-datanode-1-1-config-dp7v
+          - name: CORE_CONF_hadoop_http_staticuser_user
+            valueFrom:
+              configMapKeyRef:
+                key: CORE_CONF_hadoop_http_staticuser_user
+                name: hadoop-datanode-1-1-config-dp7v
+          - name: CORE_CONF_hadoop_proxyuser_hue_hosts
+            valueFrom:
+              configMapKeyRef:
+                key: CORE_CONF_hadoop_proxyuser_hue_hosts
+                name: hadoop-datanode-1-1-config-dp7v
+          - name: CORE_CONF_hadoop_proxyuser_hue_groups
+            valueFrom:
+              configMapKeyRef:
+                key: CORE_CONF_hadoop_proxyuser_hue_groups
+                name: hadoop-datanode-1-1-config-dp7v
+          - name: CORE_CONF_io_compression_codecs
+            valueFrom:
+              configMapKeyRef:
+                key: CORE_CONF_io_compression_codecs
+                name: hadoop-datanode-1-1-config-dp7v
+          - name: HDFS_CONF_dfs_webhdfs_enabled
+            valueFrom:
+              configMapKeyRef:
+                key: HDFS_CONF_dfs_webhdfs_enabled
+                name: hadoop-datanode-1-1-config-dp7v
+          - name: HDFS_CONF_dfs_permissions_enabled
+            valueFrom:
+              configMapKeyRef:
+                key: HDFS_CONF_dfs_permissions_enabled
+                name: hadoop-datanode-1-1-config-dp7v
+          - name: HDFS_CONF_dfs_namenode_datanode_registration_ip___hostname___check
+            valueFrom:
+              configMapKeyRef:
+                key: HDFS_CONF_dfs_namenode_datanode_registration_ip___hostname___check
+                name: hadoop-datanode-1-1-config-dp7v
+          image: us.gcr.io/course-project-330721/hadoop-datanode:latest
+          imagePullPolicy: Always
+          name: hadoop-datanode-1
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+  status:
+    availableReplicas: 2
+    conditions:
+    - lastTransitionTime: "2021-11-28T18:16:09Z"
+      lastUpdateTime: "2021-11-28T18:16:11Z"
+      message: ReplicaSet "hadoop-datanode-1-1-748b645dc" has successfully progressed.
+      reason: NewReplicaSetAvailable
+      status: "True"
+      type: Progressing
+    - lastTransitionTime: "2021-11-28T18:18:40Z"
+      lastUpdateTime: "2021-11-28T18:18:40Z"
+      message: Deployment has minimum availability.
+      reason: MinimumReplicasAvailable
+      status: "True"
+      type: Available
+    observedGeneration: 2
+    readyReplicas: 2
+    replicas: 2
+    updatedReplicas: 2
+- apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    annotations:
+      deployment.kubernetes.io/revision: "1"
+    creationTimestamp: "2021-11-28T17:15:39Z"
+    generation: 2
+    labels:
+      app: hadoop-namenode
+    name: hadoop-namenode
+    namespace: default
+    resourceVersion: "72959"
+    uid: 8d218fc6-5eb3-41b6-9e06-2dab9e1a6872
+  spec:
+    progressDeadlineSeconds: 600
+    replicas: 1
+    revisionHistoryLimit: 10
+    selector:
+      matchLabels:
+        app: hadoop-namenode
+    strategy:
+      rollingUpdate:
+        maxSurge: 25%
+        maxUnavailable: 25%
+      type: RollingUpdate
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          app: hadoop-namenode
+      spec:
+        containers:
+        - env:
+          - name: CLUSTER_NAME
+            valueFrom:
+              configMapKeyRef:
+                key: CLUSTER_NAME
+                name: hadoop-namenode-config-zpsj
+          - name: CORE_CONF_fs_defaultFS
+            valueFrom:
+              configMapKeyRef:
+                key: CORE_CONF_fs_defaultFS
+                name: hadoop-namenode-config-zpsj
+          - name: CORE_CONF_hadoop_http_staticuser_user
+            valueFrom:
+              configMapKeyRef:
+                key: CORE_CONF_hadoop_http_staticuser_user
+                name: hadoop-namenode-config-zpsj
+          - name: CORE_CONF_hadoop_proxyuser_hue_hosts
+            valueFrom:
+              configMapKeyRef:
+                key: CORE_CONF_hadoop_proxyuser_hue_hosts
+                name: hadoop-namenode-config-zpsj
+          - name: CORE_CONF_hadoop_proxyuser_hue_groups
+            valueFrom:
+              configMapKeyRef:
+                key: CORE_CONF_hadoop_proxyuser_hue_groups
+                name: hadoop-namenode-config-zpsj
+          - name: CORE_CONF_io_compression_codecs
+            valueFrom:
+              configMapKeyRef:
+                key: CORE_CONF_io_compression_codecs
+                name: hadoop-namenode-config-zpsj
+          - name: HDFS_CONF_dfs_webhdfs_enabled
+            valueFrom:
+              configMapKeyRef:
+                key: HDFS_CONF_dfs_webhdfs_enabled
+                name: hadoop-namenode-config-zpsj
+          - name: HDFS_CONF_dfs_permissions_enabled
+            valueFrom:
+              configMapKeyRef:
+                key: HDFS_CONF_dfs_permissions_enabled
+                name: hadoop-namenode-config-zpsj
+          - name: HDFS_CONF_dfs_namenode_datanode_registration_ip___hostname___check
+            valueFrom:
+              configMapKeyRef:
+                key: HDFS_CONF_dfs_namenode_datanode_registration_ip___hostname___check
+                name: hadoop-namenode-config-zpsj
+          image: us.gcr.io/course-project-330721/hadoop-namenode:latest
+          imagePullPolicy: Always
+          name: hadoop-namenode-1
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+  status:
+    availableReplicas: 1
+    conditions:
+    - lastTransitionTime: "2021-11-28T17:16:19Z"
+      lastUpdateTime: "2021-11-28T17:16:19Z"
+      message: Deployment has minimum availability.
+      reason: MinimumReplicasAvailable
+      status: "True"
+      type: Available
+    - lastTransitionTime: "2021-11-28T17:15:39Z"
+      lastUpdateTime: "2021-11-28T17:16:19Z"
+      message: ReplicaSet "hadoop-namenode-646c8884fc" has successfully progressed.
+      reason: NewReplicaSetAvailable
+      status: "True"
+      type: Progressing
+    observedGeneration: 2
+    readyReplicas: 1
+    replicas: 1
+    updatedReplicas: 1
+- apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    annotations:
+      deployment.kubernetes.io/revision: "1"
+    creationTimestamp: "2021-11-28T15:31:27Z"
+    generation: 1
+    labels:
+      app: jupyter-notebook
+    name: jupyter-notebook
+    namespace: default
+    resourceVersion: "11140"
+    uid: e55728a4-d33e-4adf-97de-d374f624f8cf
+  spec:
+    progressDeadlineSeconds: 600
+    replicas: 3
+    revisionHistoryLimit: 10
+    selector:
+      matchLabels:
+        app: jupyter-notebook
+    strategy:
+      rollingUpdate:
+        maxSurge: 25%
+        maxUnavailable: 25%
+      type: RollingUpdate
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          app: jupyter-notebook
+      spec:
+        containers:
+        - image: us.gcr.io/course-project-330721/pob6/jupyter:latest
+          imagePullPolicy: Always
+          name: jupyter-1
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+  status:
+    availableReplicas: 3
+    conditions:
+    - lastTransitionTime: "2021-11-28T15:31:47Z"
+      lastUpdateTime: "2021-11-28T15:31:47Z"
+      message: Deployment has minimum availability.
+      reason: MinimumReplicasAvailable
+      status: "True"
+      type: Available
+    - lastTransitionTime: "2021-11-28T15:31:27Z"
+      lastUpdateTime: "2021-11-28T15:31:47Z"
+      message: ReplicaSet "jupyter-notebook-5d6b68dcb6" has successfully progressed.
+      reason: NewReplicaSetAvailable
+      status: "True"
+      type: Progressing
+    observedGeneration: 1
+    readyReplicas: 3
+    replicas: 3
+    updatedReplicas: 3
+- apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    annotations:
+      deployment.kubernetes.io/revision: "1"
+    creationTimestamp: "2021-11-28T21:19:54Z"
+    generation: 1
+    labels:
+      app: sonar
+    name: sonar
+    namespace: default
+    resourceVersion: "139971"
+    uid: bbf56fc6-e7fc-41b8-8057-0f6fa3dbaef4
+  spec:
+    progressDeadlineSeconds: 600
+    replicas: 3
+    revisionHistoryLimit: 10
+    selector:
+      matchLabels:
+        app: sonar
+    strategy:
+      rollingUpdate:
+        maxSurge: 25%
+        maxUnavailable: 25%
+      type: RollingUpdate
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          app: sonar
+      spec:
+        containers:
+        - image: us.gcr.io/course-project-330721/pob6/sonar:latest
+          imagePullPolicy: Always
+          name: sonar-1
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+  status:
+    availableReplicas: 3
+    conditions:
+    - lastTransitionTime: "2021-11-28T21:20:16Z"
+      lastUpdateTime: "2021-11-28T21:20:16Z"
+      message: Deployment has minimum availability.
+      reason: MinimumReplicasAvailable
+      status: "True"
+      type: Available
+    - lastTransitionTime: "2021-11-28T21:19:54Z"
+      lastUpdateTime: "2021-11-28T21:20:16Z"
+      message: ReplicaSet "sonar-6cbd6c8f4d" has successfully progressed.
+      reason: NewReplicaSetAvailable
+      status: "True"
+      type: Progressing
+    observedGeneration: 1
+    readyReplicas: 3
+    replicas: 3
+    updatedReplicas: 3
+- apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    annotations:
+      deployment.kubernetes.io/revision: "1"
+    creationTimestamp: "2021-11-28T15:05:49Z"
+    generation: 1
+    labels:
+      app: spark-leader
+    name: spark-leader
+    namespace: default
+    resourceVersion: "1348"
+    uid: 83bdb317-ca9e-4ed9-a1c5-86c88b03fd7b
+  spec:
+    progressDeadlineSeconds: 600
+    replicas: 3
+    revisionHistoryLimit: 10
+    selector:
+      matchLabels:
+        app: spark-leader
+    strategy:
+      rollingUpdate:
+        maxSurge: 25%
+        maxUnavailable: 25%
+      type: RollingUpdate
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          app: spark-leader
+      spec:
+        containers:
+        - env:
+          - name: SPARK_MODE
+            valueFrom:
+              configMapKeyRef:
+                key: SPARK_MODE
+                name: spark-leader-config-u4zm
+          - name: SPARK_RPC_AUTHENTICATION_ENABLED
+            valueFrom:
+              configMapKeyRef:
+                key: SPARK_RPC_AUTHENTICATION_ENABLED
+                name: spark-leader-config-u4zm
+          - name: SPARK_RPC_ENCRYPTION_ENABLED
+            valueFrom:
+              configMapKeyRef:
+                key: SPARK_RPC_ENCRYPTION_ENABLED
+                name: spark-leader-config-u4zm
+          - name: SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED
+            valueFrom:
+              configMapKeyRef:
+                key: SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED
+                name: spark-leader-config-u4zm
+          - name: SPARK_SSL_ENABLED
+            valueFrom:
+              configMapKeyRef:
+                key: SPARK_SSL_ENABLED
+                name: spark-leader-config-u4zm
+          image: us.gcr.io/course-project-330721/pob6/spark@sha256:43b28d68dda98dbb3496551213f8d69a8f963547b962a7e8d7f0843e3f0131ea
+          imagePullPolicy: IfNotPresent
+          name: spark-sha256-1
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+  status:
+    availableReplicas: 3
+    conditions:
+    - lastTransitionTime: "2021-11-28T15:06:37Z"
+      lastUpdateTime: "2021-11-28T15:06:37Z"
+      message: Deployment has minimum availability.
+      reason: MinimumReplicasAvailable
+      status: "True"
+      type: Available
+    - lastTransitionTime: "2021-11-28T15:05:49Z"
+      lastUpdateTime: "2021-11-28T15:06:37Z"
+      message: ReplicaSet "spark-leader-9944bf6c7" has successfully progressed.
+      reason: NewReplicaSetAvailable
+      status: "True"
+      type: Progressing
+    observedGeneration: 1
+    readyReplicas: 3
+    replicas: 3
+    updatedReplicas: 3
+- apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    annotations:
+      deployment.kubernetes.io/revision: "1"
+    creationTimestamp: "2021-11-28T15:27:51Z"
+    generation: 1
+    labels:
+      app: spark-worker-4
+    name: spark-worker-4
+    namespace: default
+    resourceVersion: "9703"
+    uid: eb651685-c0b6-4905-99f9-4f348e1f6b27
+  spec:
+    progressDeadlineSeconds: 600
+    replicas: 3
+    revisionHistoryLimit: 10
+    selector:
+      matchLabels:
+        app: spark-worker-4
+    strategy:
+      rollingUpdate:
+        maxSurge: 25%
+        maxUnavailable: 25%
+      type: RollingUpdate
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          app: spark-worker-4
+      spec:
+        containers:
+        - env:
+          - name: SPARK_MODE
+            valueFrom:
+              configMapKeyRef:
+                key: SPARK_MODE
+                name: spark-worker-4-config-frra
+          - name: SPARK_MASTER_URL
+            valueFrom:
+              configMapKeyRef:
+                key: SPARK_MASTER_URL
+                name: spark-worker-4-config-frra
+          - name: SPARK_WORKER_MEMORY
+            valueFrom:
+              configMapKeyRef:
+                key: SPARK_WORKER_MEMORY
+                name: spark-worker-4-config-frra
+          - name: SPARK_WORKER_CORES
+            valueFrom:
+              configMapKeyRef:
+                key: SPARK_WORKER_CORES
+                name: spark-worker-4-config-frra
+          - name: SPARK_RPC_AUTHENTICATION_ENABLED
+            valueFrom:
+              configMapKeyRef:
+                key: SPARK_RPC_AUTHENTICATION_ENABLED
+                name: spark-worker-4-config-frra
+          - name: SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED
+            valueFrom:
+              configMapKeyRef:
+                key: SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED
+                name: spark-worker-4-config-frra
+          - name: SPARK_SSL_ENABLED
+            valueFrom:
+              configMapKeyRef:
+                key: SPARK_SSL_ENABLED
+                name: spark-worker-4-config-frra
+          image: us.gcr.io/course-project-330721/pob6/spark:latest
+          imagePullPolicy: Always
+          name: spark-1
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+  status:
+    availableReplicas: 3
+    conditions:
+    - lastTransitionTime: "2021-11-28T15:27:54Z"
+      lastUpdateTime: "2021-11-28T15:27:54Z"
+      message: Deployment has minimum availability.
+      reason: MinimumReplicasAvailable
+      status: "True"
+      type: Available
+    - lastTransitionTime: "2021-11-28T15:27:51Z"
+      lastUpdateTime: "2021-11-28T15:27:54Z"
+      message: ReplicaSet "spark-worker-4-5885d989dc" has successfully progressed.
+      reason: NewReplicaSetAvailable
+      status: "True"
+      type: Progressing
+    observedGeneration: 1
+    readyReplicas: 3
+    replicas: 3
+    updatedReplicas: 3
+- apiVersion: apps/v1
+  kind: ReplicaSet
+  metadata:
+    annotations:
+      deployment.kubernetes.io/desired-replicas: "3"
+      deployment.kubernetes.io/max-replicas: "4"
+      deployment.kubernetes.io/revision: "1"
+    creationTimestamp: "2021-11-28T21:58:23Z"
+    generation: 1
+    labels:
+      app: gui-driver
+      pod-template-hash: 75f6b6bbcf
+    name: gui-driver-75f6b6bbcf
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Deployment
+      name: gui-driver
+      uid: 92473e05-b3af-4af6-bc07-1ea8ee803860
+    resourceVersion: "154253"
+    uid: fa966d1f-a995-456b-a7b9-75697e842711
+  spec:
+    replicas: 3
+    selector:
+      matchLabels:
+        app: gui-driver
+        pod-template-hash: 75f6b6bbcf
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          app: gui-driver
+          pod-template-hash: 75f6b6bbcf
+      spec:
+        containers:
+        - image: us.gcr.io/course-project-330721/pob6/gui_driver:latest
+          imagePullPolicy: Always
+          name: gui-driver-1
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+  status:
+    availableReplicas: 3
+    fullyLabeledReplicas: 3
+    observedGeneration: 1
+    readyReplicas: 3
+    replicas: 3
+- apiVersion: apps/v1
+  kind: ReplicaSet
+  metadata:
+    annotations:
+      deployment.kubernetes.io/desired-replicas: "2"
+      deployment.kubernetes.io/max-replicas: "3"
+      deployment.kubernetes.io/revision: "1"
+    creationTimestamp: "2021-11-28T18:16:09Z"
+    generation: 2
+    labels:
+      app: hadoop-datanode-1-1
+      pod-template-hash: 748b645dc
+    name: hadoop-datanode-1-1-748b645dc
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Deployment
+      name: hadoop-datanode-1-1
+      uid: ce078c3e-5838-4c09-9ffe-19ab56a88f69
+    resourceVersion: "73414"
+    uid: ce1f381a-3d93-4023-9238-e3459cfa253a
+  spec:
+    replicas: 2
+    selector:
+      matchLabels:
+        app: hadoop-datanode-1-1
+        pod-template-hash: 748b645dc
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          app: hadoop-datanode-1-1
+          pod-template-hash: 748b645dc
+      spec:
+        containers:
+        - env:
+          - name: SERVICE_PRECONDITION
+            valueFrom:
+              configMapKeyRef:
+                key: SERVICE_PRECONDITION
+                name: hadoop-datanode-1-1-config-dp7v
+          - name: CORE_CONF_fs_defaultFS
+            valueFrom:
+              configMapKeyRef:
+                key: CORE_CONF_fs_defaultFS
+                name: hadoop-datanode-1-1-config-dp7v
+          - name: CORE_CONF_hadoop_http_staticuser_user
+            valueFrom:
+              configMapKeyRef:
+                key: CORE_CONF_hadoop_http_staticuser_user
+                name: hadoop-datanode-1-1-config-dp7v
+          - name: CORE_CONF_hadoop_proxyuser_hue_hosts
+            valueFrom:
+              configMapKeyRef:
+                key: CORE_CONF_hadoop_proxyuser_hue_hosts
+                name: hadoop-datanode-1-1-config-dp7v
+          - name: CORE_CONF_hadoop_proxyuser_hue_groups
+            valueFrom:
+              configMapKeyRef:
+                key: CORE_CONF_hadoop_proxyuser_hue_groups
+                name: hadoop-datanode-1-1-config-dp7v
+          - name: CORE_CONF_io_compression_codecs
+            valueFrom:
+              configMapKeyRef:
+                key: CORE_CONF_io_compression_codecs
+                name: hadoop-datanode-1-1-config-dp7v
+          - name: HDFS_CONF_dfs_webhdfs_enabled
+            valueFrom:
+              configMapKeyRef:
+                key: HDFS_CONF_dfs_webhdfs_enabled
+                name: hadoop-datanode-1-1-config-dp7v
+          - name: HDFS_CONF_dfs_permissions_enabled
+            valueFrom:
+              configMapKeyRef:
+                key: HDFS_CONF_dfs_permissions_enabled
+                name: hadoop-datanode-1-1-config-dp7v
+          - name: HDFS_CONF_dfs_namenode_datanode_registration_ip___hostname___check
+            valueFrom:
+              configMapKeyRef:
+                key: HDFS_CONF_dfs_namenode_datanode_registration_ip___hostname___check
+                name: hadoop-datanode-1-1-config-dp7v
+          image: us.gcr.io/course-project-330721/hadoop-datanode:latest
+          imagePullPolicy: Always
+          name: hadoop-datanode-1
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+  status:
+    availableReplicas: 2
+    fullyLabeledReplicas: 2
+    observedGeneration: 2
+    readyReplicas: 2
+    replicas: 2
+- apiVersion: apps/v1
+  kind: ReplicaSet
+  metadata:
+    annotations:
+      deployment.kubernetes.io/desired-replicas: "1"
+      deployment.kubernetes.io/max-replicas: "2"
+      deployment.kubernetes.io/revision: "1"
+    creationTimestamp: "2021-11-28T17:15:39Z"
+    generation: 2
+    labels:
+      app: hadoop-namenode
+      pod-template-hash: 646c8884fc
+    name: hadoop-namenode-646c8884fc
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Deployment
+      name: hadoop-namenode
+      uid: 8d218fc6-5eb3-41b6-9e06-2dab9e1a6872
+    resourceVersion: "72955"
+    uid: 81c39794-e1a9-4421-bc15-4416719db73b
+  spec:
+    replicas: 1
+    selector:
+      matchLabels:
+        app: hadoop-namenode
+        pod-template-hash: 646c8884fc
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          app: hadoop-namenode
+          pod-template-hash: 646c8884fc
+      spec:
+        containers:
+        - env:
+          - name: CLUSTER_NAME
+            valueFrom:
+              configMapKeyRef:
+                key: CLUSTER_NAME
+                name: hadoop-namenode-config-zpsj
+          - name: CORE_CONF_fs_defaultFS
+            valueFrom:
+              configMapKeyRef:
+                key: CORE_CONF_fs_defaultFS
+                name: hadoop-namenode-config-zpsj
+          - name: CORE_CONF_hadoop_http_staticuser_user
+            valueFrom:
+              configMapKeyRef:
+                key: CORE_CONF_hadoop_http_staticuser_user
+                name: hadoop-namenode-config-zpsj
+          - name: CORE_CONF_hadoop_proxyuser_hue_hosts
+            valueFrom:
+              configMapKeyRef:
+                key: CORE_CONF_hadoop_proxyuser_hue_hosts
+                name: hadoop-namenode-config-zpsj
+          - name: CORE_CONF_hadoop_proxyuser_hue_groups
+            valueFrom:
+              configMapKeyRef:
+                key: CORE_CONF_hadoop_proxyuser_hue_groups
+                name: hadoop-namenode-config-zpsj
+          - name: CORE_CONF_io_compression_codecs
+            valueFrom:
+              configMapKeyRef:
+                key: CORE_CONF_io_compression_codecs
+                name: hadoop-namenode-config-zpsj
+          - name: HDFS_CONF_dfs_webhdfs_enabled
+            valueFrom:
+              configMapKeyRef:
+                key: HDFS_CONF_dfs_webhdfs_enabled
+                name: hadoop-namenode-config-zpsj
+          - name: HDFS_CONF_dfs_permissions_enabled
+            valueFrom:
+              configMapKeyRef:
+                key: HDFS_CONF_dfs_permissions_enabled
+                name: hadoop-namenode-config-zpsj
+          - name: HDFS_CONF_dfs_namenode_datanode_registration_ip___hostname___check
+            valueFrom:
+              configMapKeyRef:
+                key: HDFS_CONF_dfs_namenode_datanode_registration_ip___hostname___check
+                name: hadoop-namenode-config-zpsj
+          image: us.gcr.io/course-project-330721/hadoop-namenode:latest
+          imagePullPolicy: Always
+          name: hadoop-namenode-1
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+  status:
+    availableReplicas: 1
+    fullyLabeledReplicas: 1
+    observedGeneration: 2
+    readyReplicas: 1
+    replicas: 1
+- apiVersion: apps/v1
+  kind: ReplicaSet
+  metadata:
+    annotations:
+      deployment.kubernetes.io/desired-replicas: "3"
+      deployment.kubernetes.io/max-replicas: "4"
+      deployment.kubernetes.io/revision: "1"
+    creationTimestamp: "2021-11-28T15:31:27Z"
+    generation: 1
+    labels:
+      app: jupyter-notebook
+      pod-template-hash: 5d6b68dcb6
+    name: jupyter-notebook-5d6b68dcb6
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Deployment
+      name: jupyter-notebook
+      uid: e55728a4-d33e-4adf-97de-d374f624f8cf
+    resourceVersion: "11139"
+    uid: 2a74afde-e100-4605-a29b-91927e9ee10e
+  spec:
+    replicas: 3
+    selector:
+      matchLabels:
+        app: jupyter-notebook
+        pod-template-hash: 5d6b68dcb6
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          app: jupyter-notebook
+          pod-template-hash: 5d6b68dcb6
+      spec:
+        containers:
+        - image: us.gcr.io/course-project-330721/pob6/jupyter:latest
+          imagePullPolicy: Always
+          name: jupyter-1
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+  status:
+    availableReplicas: 3
+    fullyLabeledReplicas: 3
+    observedGeneration: 1
+    readyReplicas: 3
+    replicas: 3
+- apiVersion: apps/v1
+  kind: ReplicaSet
+  metadata:
+    annotations:
+      deployment.kubernetes.io/desired-replicas: "3"
+      deployment.kubernetes.io/max-replicas: "4"
+      deployment.kubernetes.io/revision: "1"
+    creationTimestamp: "2021-11-28T21:19:54Z"
+    generation: 1
+    labels:
+      app: sonar
+      pod-template-hash: 6cbd6c8f4d
+    name: sonar-6cbd6c8f4d
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Deployment
+      name: sonar
+      uid: bbf56fc6-e7fc-41b8-8057-0f6fa3dbaef4
+    resourceVersion: "139970"
+    uid: dcbd04ab-2da2-4811-b744-c19e3939f1af
+  spec:
+    replicas: 3
+    selector:
+      matchLabels:
+        app: sonar
+        pod-template-hash: 6cbd6c8f4d
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          app: sonar
+          pod-template-hash: 6cbd6c8f4d
+      spec:
+        containers:
+        - image: us.gcr.io/course-project-330721/pob6/sonar:latest
+          imagePullPolicy: Always
+          name: sonar-1
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+  status:
+    availableReplicas: 3
+    fullyLabeledReplicas: 3
+    observedGeneration: 1
+    readyReplicas: 3
+    replicas: 3
+- apiVersion: apps/v1
+  kind: ReplicaSet
+  metadata:
+    annotations:
+      deployment.kubernetes.io/desired-replicas: "3"
+      deployment.kubernetes.io/max-replicas: "4"
+      deployment.kubernetes.io/revision: "1"
+    creationTimestamp: "2021-11-28T15:05:49Z"
+    generation: 1
+    labels:
+      app: spark-leader
+      pod-template-hash: 9944bf6c7
+    name: spark-leader-9944bf6c7
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Deployment
+      name: spark-leader
+      uid: 83bdb317-ca9e-4ed9-a1c5-86c88b03fd7b
+    resourceVersion: "1345"
+    uid: d522b8c0-803f-4208-bd39-414284eafca0
+  spec:
+    replicas: 3
+    selector:
+      matchLabels:
+        app: spark-leader
+        pod-template-hash: 9944bf6c7
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          app: spark-leader
+          pod-template-hash: 9944bf6c7
+      spec:
+        containers:
+        - env:
+          - name: SPARK_MODE
+            valueFrom:
+              configMapKeyRef:
+                key: SPARK_MODE
+                name: spark-leader-config-u4zm
+          - name: SPARK_RPC_AUTHENTICATION_ENABLED
+            valueFrom:
+              configMapKeyRef:
+                key: SPARK_RPC_AUTHENTICATION_ENABLED
+                name: spark-leader-config-u4zm
+          - name: SPARK_RPC_ENCRYPTION_ENABLED
+            valueFrom:
+              configMapKeyRef:
+                key: SPARK_RPC_ENCRYPTION_ENABLED
+                name: spark-leader-config-u4zm
+          - name: SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED
+            valueFrom:
+              configMapKeyRef:
+                key: SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED
+                name: spark-leader-config-u4zm
+          - name: SPARK_SSL_ENABLED
+            valueFrom:
+              configMapKeyRef:
+                key: SPARK_SSL_ENABLED
+                name: spark-leader-config-u4zm
+          image: us.gcr.io/course-project-330721/pob6/spark@sha256:43b28d68dda98dbb3496551213f8d69a8f963547b962a7e8d7f0843e3f0131ea
+          imagePullPolicy: IfNotPresent
+          name: spark-sha256-1
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+  status:
+    availableReplicas: 3
+    fullyLabeledReplicas: 3
+    observedGeneration: 1
+    readyReplicas: 3
+    replicas: 3
+- apiVersion: apps/v1
+  kind: ReplicaSet
+  metadata:
+    annotations:
+      deployment.kubernetes.io/desired-replicas: "3"
+      deployment.kubernetes.io/max-replicas: "4"
+      deployment.kubernetes.io/revision: "1"
+    creationTimestamp: "2021-11-28T15:27:51Z"
+    generation: 1
+    labels:
+      app: spark-worker-4
+      pod-template-hash: 5885d989dc
+    name: spark-worker-4-5885d989dc
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Deployment
+      name: spark-worker-4
+      uid: eb651685-c0b6-4905-99f9-4f348e1f6b27
+    resourceVersion: "9702"
+    uid: 13caf2e3-84e3-49f7-9c67-68f498dfc310
+  spec:
+    replicas: 3
+    selector:
+      matchLabels:
+        app: spark-worker-4
+        pod-template-hash: 5885d989dc
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          app: spark-worker-4
+          pod-template-hash: 5885d989dc
+      spec:
+        containers:
+        - env:
+          - name: SPARK_MODE
+            valueFrom:
+              configMapKeyRef:
+                key: SPARK_MODE
+                name: spark-worker-4-config-frra
+          - name: SPARK_MASTER_URL
+            valueFrom:
+              configMapKeyRef:
+                key: SPARK_MASTER_URL
+                name: spark-worker-4-config-frra
+          - name: SPARK_WORKER_MEMORY
+            valueFrom:
+              configMapKeyRef:
+                key: SPARK_WORKER_MEMORY
+                name: spark-worker-4-config-frra
+          - name: SPARK_WORKER_CORES
+            valueFrom:
+              configMapKeyRef:
+                key: SPARK_WORKER_CORES
+                name: spark-worker-4-config-frra
+          - name: SPARK_RPC_AUTHENTICATION_ENABLED
+            valueFrom:
+              configMapKeyRef:
+                key: SPARK_RPC_AUTHENTICATION_ENABLED
+                name: spark-worker-4-config-frra
+          - name: SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED
+            valueFrom:
+              configMapKeyRef:
+                key: SPARK_LOCAL_STORAGE_ENCRYPTION_ENABLED
+                name: spark-worker-4-config-frra
+          - name: SPARK_SSL_ENABLED
+            valueFrom:
+              configMapKeyRef:
+                key: SPARK_SSL_ENABLED
+                name: spark-worker-4-config-frra
+          image: us.gcr.io/course-project-330721/pob6/spark:latest
+          imagePullPolicy: Always
+          name: spark-1
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+  status:
+    availableReplicas: 3
+    fullyLabeledReplicas: 3
+    observedGeneration: 1
+    readyReplicas: 3
+    replicas: 3
+- apiVersion: autoscaling/v1
+  kind: HorizontalPodAutoscaler
+  metadata:
+    annotations:
+      autoscaling.alpha.kubernetes.io/conditions: '[{"type":"AbleToScale","status":"True","lastTransitionTime":"2021-11-28T21:58:39Z","reason":"ReadyForNewScale","message":"recommended
+        size matches current size"},{"type":"ScalingActive","status":"True","lastTransitionTime":"2021-11-28T21:58:39Z","reason":"ValidMetricFound","message":"the
+        HPA was able to successfully calculate a replica count from cpu resource utilization
+        (percentage of request)"},{"type":"ScalingLimited","status":"False","lastTransitionTime":"2021-11-28T21:58:39Z","reason":"DesiredWithinRange","message":"the
+        desired count is within the acceptable range"}]'
+      autoscaling.alpha.kubernetes.io/current-metrics: '[{"type":""}]'
+    creationTimestamp: "2021-11-28T21:58:23Z"
+    labels:
+      app: gui-driver
+    name: gui-driver-hpa-c3h0
+    namespace: default
+    resourceVersion: "154334"
+    uid: 1c3f6498-4eb2-40b5-9622-916d5af44da0
+  spec:
+    maxReplicas: 5
+    minReplicas: 1
+    scaleTargetRef:
+      apiVersion: apps/v1
+      kind: Deployment
+      name: gui-driver
+    targetCPUUtilizationPercentage: 80
+  status:
+    currentReplicas: 3
+    desiredReplicas: 3
+- apiVersion: autoscaling/v1
+  kind: HorizontalPodAutoscaler
+  metadata:
+    annotations:
+      autoscaling.alpha.kubernetes.io/conditions: '[{"type":"AbleToScale","status":"True","lastTransitionTime":"2021-11-28T18:16:25Z","reason":"ReadyForNewScale","message":"recommended
+        size matches current size"},{"type":"ScalingActive","status":"True","lastTransitionTime":"2021-11-28T18:16:25Z","reason":"ValidMetricFound","message":"the
+        HPA was able to successfully calculate a replica count from cpu resource utilization
+        (percentage of request)"},{"type":"ScalingLimited","status":"False","lastTransitionTime":"2021-11-28T18:16:25Z","reason":"DesiredWithinRange","message":"the
+        desired count is within the acceptable range"}]'
+      autoscaling.alpha.kubernetes.io/current-metrics: '[{"type":""}]'
+    creationTimestamp: "2021-11-28T18:16:09Z"
+    labels:
+      app: hadoop-datanode-1-1
+    name: hadoop-datanode-1-1-hpa-twhw
+    namespace: default
+    resourceVersion: "73451"
+    uid: e291cb97-a0ae-4557-9b3e-963d5fb49533
+  spec:
+    maxReplicas: 5
+    minReplicas: 1
+    scaleTargetRef:
+      apiVersion: apps/v1
+      kind: Deployment
+      name: hadoop-datanode-1-1
+    targetCPUUtilizationPercentage: 80
+  status:
+    currentReplicas: 2
+    desiredReplicas: 2
+- apiVersion: autoscaling/v1
+  kind: HorizontalPodAutoscaler
+  metadata:
+    annotations:
+      autoscaling.alpha.kubernetes.io/conditions: '[{"type":"AbleToScale","status":"True","lastTransitionTime":"2021-11-28T17:15:54Z","reason":"ReadyForNewScale","message":"recommended
+        size matches current size"},{"type":"ScalingActive","status":"True","lastTransitionTime":"2021-11-28T17:15:54Z","reason":"ValidMetricFound","message":"the
+        HPA was able to successfully calculate a replica count from cpu resource utilization
+        (percentage of request)"},{"type":"ScalingLimited","status":"False","lastTransitionTime":"2021-11-28T17:15:54Z","reason":"DesiredWithinRange","message":"the
+        desired count is within the acceptable range"}]'
+      autoscaling.alpha.kubernetes.io/current-metrics: '[{"type":""}]'
+    creationTimestamp: "2021-11-28T17:15:39Z"
+    labels:
+      app: hadoop-namenode
+    name: hadoop-namenode-hpa-8imi
+    namespace: default
+    resourceVersion: "73045"
+    uid: 2a476ae6-4470-464f-bc4e-1d2f42e69270
+  spec:
+    maxReplicas: 5
+    minReplicas: 1
+    scaleTargetRef:
+      apiVersion: apps/v1
+      kind: Deployment
+      name: hadoop-namenode
+    targetCPUUtilizationPercentage: 80
+  status:
+    currentReplicas: 1
+    desiredReplicas: 1
+- apiVersion: autoscaling/v1
+  kind: HorizontalPodAutoscaler
+  metadata:
+    annotations:
+      autoscaling.alpha.kubernetes.io/conditions: '[{"type":"AbleToScale","status":"True","lastTransitionTime":"2021-11-28T15:31:42Z","reason":"ReadyForNewScale","message":"recommended
+        size matches current size"},{"type":"ScalingActive","status":"True","lastTransitionTime":"2021-11-28T15:31:42Z","reason":"ValidMetricFound","message":"the
+        HPA was able to successfully calculate a replica count from cpu resource utilization
+        (percentage of request)"},{"type":"ScalingLimited","status":"False","lastTransitionTime":"2021-11-28T15:31:42Z","reason":"DesiredWithinRange","message":"the
+        desired count is within the acceptable range"}]'
+      autoscaling.alpha.kubernetes.io/current-metrics: '[{"type":""}]'
+    creationTimestamp: "2021-11-28T15:31:27Z"
+    labels:
+      app: jupyter-notebook
+    name: jupyter-notebook-hpa-ohyk
+    namespace: default
+    resourceVersion: "11095"
+    uid: 2a7c1dc6-8a8f-4ca2-8ec8-4f11c1e13f5b
+  spec:
+    maxReplicas: 5
+    minReplicas: 1
+    scaleTargetRef:
+      apiVersion: apps/v1
+      kind: Deployment
+      name: jupyter-notebook
+    targetCPUUtilizationPercentage: 80
+  status:
+    currentReplicas: 3
+    desiredReplicas: 3
+- apiVersion: autoscaling/v1
+  kind: HorizontalPodAutoscaler
+  metadata:
+    annotations:
+      autoscaling.alpha.kubernetes.io/conditions: '[{"type":"AbleToScale","status":"True","lastTransitionTime":"2021-11-28T21:20:09Z","reason":"ReadyForNewScale","message":"recommended
+        size matches current size"},{"type":"ScalingActive","status":"True","lastTransitionTime":"2021-11-28T21:20:09Z","reason":"ValidMetricFound","message":"the
+        HPA was able to successfully calculate a replica count from cpu resource utilization
+        (percentage of request)"},{"type":"ScalingLimited","status":"False","lastTransitionTime":"2021-11-28T21:20:09Z","reason":"DesiredWithinRange","message":"the
+        desired count is within the acceptable range"}]'
+      autoscaling.alpha.kubernetes.io/current-metrics: '[{"type":""}]'
+    creationTimestamp: "2021-11-28T21:19:54Z"
+    labels:
+      app: sonar
+    name: sonar-hpa-erlf
+    namespace: default
+    resourceVersion: "139911"
+    uid: 70710df0-8445-4b58-9f4f-7daac741e296
+  spec:
+    maxReplicas: 5
+    minReplicas: 1
+    scaleTargetRef:
+      apiVersion: apps/v1
+      kind: Deployment
+      name: sonar
+    targetCPUUtilizationPercentage: 80
+  status:
+    currentReplicas: 3
+    desiredReplicas: 3
+- apiVersion: autoscaling/v1
+  kind: HorizontalPodAutoscaler
+  metadata:
+    annotations:
+      autoscaling.alpha.kubernetes.io/conditions: '[{"type":"AbleToScale","status":"True","lastTransitionTime":"2021-11-28T15:06:06Z","reason":"ReadyForNewScale","message":"recommended
+        size matches current size"},{"type":"ScalingActive","status":"True","lastTransitionTime":"2021-11-28T15:06:06Z","reason":"ValidMetricFound","message":"the
+        HPA was able to successfully calculate a replica count from cpu resource utilization
+        (percentage of request)"},{"type":"ScalingLimited","status":"False","lastTransitionTime":"2021-11-28T15:06:06Z","reason":"DesiredWithinRange","message":"the
+        desired count is within the acceptable range"}]'
+      autoscaling.alpha.kubernetes.io/current-metrics: '[{"type":""}]'
+    creationTimestamp: "2021-11-28T15:05:49Z"
+    labels:
+      app: spark-leader
+    name: spark-leader-hpa-hlkl
+    namespace: default
+    resourceVersion: "1054"
+    uid: 127fb9ed-4d9e-463b-9a37-97f1e79443c3
+  spec:
+    maxReplicas: 5
+    minReplicas: 1
+    scaleTargetRef:
+      apiVersion: apps/v1
+      kind: Deployment
+      name: spark-leader
+    targetCPUUtilizationPercentage: 80
+  status:
+    currentReplicas: 3
+    desiredReplicas: 3
+- apiVersion: autoscaling/v1
+  kind: HorizontalPodAutoscaler
+  metadata:
+    annotations:
+      autoscaling.alpha.kubernetes.io/conditions: '[{"type":"AbleToScale","status":"True","lastTransitionTime":"2021-11-28T15:28:06Z","reason":"ReadyForNewScale","message":"recommended
+        size matches current size"},{"type":"ScalingActive","status":"True","lastTransitionTime":"2021-11-28T15:28:06Z","reason":"ValidMetricFound","message":"the
+        HPA was able to successfully calculate a replica count from cpu resource utilization
+        (percentage of request)"},{"type":"ScalingLimited","status":"False","lastTransitionTime":"2021-11-28T15:28:06Z","reason":"DesiredWithinRange","message":"the
+        desired count is within the acceptable range"}]'
+      autoscaling.alpha.kubernetes.io/current-metrics: '[{"type":""}]'
+    creationTimestamp: "2021-11-28T15:27:51Z"
+    labels:
+      app: spark-worker-4
+    name: spark-worker-4-hpa-gq72
+    namespace: default
+    resourceVersion: "9776"
+    uid: 9192dd74-c3c8-4863-b88d-445bbb87d10b
+  spec:
+    maxReplicas: 5
+    minReplicas: 1
+    scaleTargetRef:
+      apiVersion: apps/v1
+      kind: Deployment
+      name: spark-worker-4
+    targetCPUUtilizationPercentage: 80
+  status:
+    currentReplicas: 3
+    desiredReplicas: 3
+kind: List
+metadata:
+  resourceVersion: ""
+  selfLink: ""

@@ -1,0 +1,182 @@
+--- 
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  annotations: 
+    deployment.kubernetes.io/revision: "1"
+  generation: 1
+  labels: 
+    app: sonar
+  managedFields: 
+    - 
+      apiVersion: apps/v1
+      fieldsType: FieldsV1
+      fieldsV1: 
+        ? "f:metadata"
+        : 
+          ? "f:labels"
+          : 
+            ? "."
+            : {}
+            ? "f:app"
+            : {}
+        ? "f:spec"
+        : 
+          ? "f:progressDeadlineSeconds"
+          : {}
+          ? "f:replicas"
+          : {}
+          ? "f:revisionHistoryLimit"
+          : {}
+          ? "f:selector"
+          : {}
+          ? "f:strategy"
+          : 
+            ? "f:rollingUpdate"
+            : 
+              ? "."
+              : {}
+              ? "f:maxSurge"
+              : {}
+              ? "f:maxUnavailable"
+              : {}
+            ? "f:type"
+            : {}
+          ? "f:template"
+          : 
+            ? "f:metadata"
+            : 
+              ? "f:labels"
+              : 
+                ? "."
+                : {}
+                ? "f:app"
+                : {}
+            ? "f:spec"
+            : 
+              ? "f:containers"
+              : 
+                ? "k:{\"name\":\"sonar-1\"}"
+                : 
+                  ? "."
+                  : {}
+                  ? "f:image"
+                  : {}
+                  ? "f:imagePullPolicy"
+                  : {}
+                  ? "f:name"
+                  : {}
+                  ? "f:resources"
+                  : {}
+                  ? "f:terminationMessagePath"
+                  : {}
+                  ? "f:terminationMessagePolicy"
+                  : {}
+              ? "f:dnsPolicy"
+              : {}
+              ? "f:restartPolicy"
+              : {}
+              ? "f:schedulerName"
+              : {}
+              ? "f:securityContext"
+              : {}
+              ? "f:terminationGracePeriodSeconds"
+              : {}
+      manager: GoogleCloudConsole
+      operation: Update
+    - 
+      apiVersion: apps/v1
+      fieldsType: FieldsV1
+      fieldsV1: 
+        ? "f:metadata"
+        : 
+          ? "f:annotations"
+          : 
+            ? "."
+            : {}
+            ? "f:deployment.kubernetes.io/revision"
+            : {}
+        ? "f:status"
+        : 
+          ? "f:availableReplicas"
+          : {}
+          ? "f:conditions"
+          : 
+            ? "."
+            : {}
+            ? "k:{\"type\":\"Available\"}"
+            : 
+              ? "."
+              : {}
+              ? "f:lastTransitionTime"
+              : {}
+              ? "f:lastUpdateTime"
+              : {}
+              ? "f:message"
+              : {}
+              ? "f:reason"
+              : {}
+              ? "f:status"
+              : {}
+              ? "f:type"
+              : {}
+            ? "k:{\"type\":\"Progressing\"}"
+            : 
+              ? "."
+              : {}
+              ? "f:lastTransitionTime"
+              : {}
+              ? "f:lastUpdateTime"
+              : {}
+              ? "f:message"
+              : {}
+              ? "f:reason"
+              : {}
+              ? "f:status"
+              : {}
+              ? "f:type"
+              : {}
+          ? "f:observedGeneration"
+          : {}
+          ? "f:readyReplicas"
+          : {}
+          ? "f:replicas"
+          : {}
+          ? "f:updatedReplicas"
+          : {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2021-11-28T21:20:17Z"
+  name: sonar
+  namespace: default
+spec: 
+  progressDeadlineSeconds: 600
+  replicas: 3
+  revisionHistoryLimit: 10
+  selector: 
+    matchLabels: 
+      app: sonar
+  strategy: 
+    rollingUpdate: 
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template: 
+    metadata: 
+      creationTimestamp: ~
+      labels: 
+        app: sonar
+    spec: 
+      containers: 
+        - 
+          image: "us.gcr.io/course-project-330721/pob6/sonar:latest"
+          imagePullPolicy: Always
+          name: sonar-1
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
