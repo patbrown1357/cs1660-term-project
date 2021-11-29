@@ -13,6 +13,6 @@
 ## 2) Creating the application
 1. Create a cluster - the configuration doesn't matter we just need a cluster to host our application
 2. Wait for the cluster to be created
-3. Connect to the new cluster and upload [final-yaml/compose-final.yaml](final-yaml/compose-final.yaml)
+3. Connect to the new cluster and upload [final-yaml/compose-final.yaml](final-yaml/final-compose.yaml)
 4. run `kubectl apply -f compose-final.yaml` this will create all the workloads and services
 5. You can now grab a link to the gui from the services tab - from the gui you can access any of the other applications
